@@ -1,0 +1,39 @@
+.coloredSetion {
+    min-height: 70vh;
+    background-color: #ccc;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.whiteSection {
+    min-height: 80vh;
+    background-color: #fff;
+}
+
+.mainHeader,
+.subHeader {
+    margin: 0;
+    padding-top: 50px;
+    color: #fff;
+}
+
+.HomeFirstSectionWrapper {
+    width: 100%;
+    display: flex;
+}
+
+.worksWeDoSolarPanel{
+    border-right: 3px solid rgb(245, 245, 245);
+    color: #fff;
+    padding-left: 15%;
+}
+
+.worksWeDoSolarPanel, 
+.worksWeDoElectrical {
+    flex: 1;
+    padding-top: 30px;
+    min-height: 70vh;
+    text-align: left;
+}
+ 

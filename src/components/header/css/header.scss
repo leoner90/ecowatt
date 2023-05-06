@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+.MainLogo {
+    animation: 1.85s ease-out 0s 1 slideInFromLeft;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contactInfo {
+  display: flex;
+  height: 32px;
+  background-color: rgb(132, 189, 0);
+  border-radius: 0 0 3px 3px;
+  color: #fff;
+  align-items: center;
+  div {
+    flex: 1;
+    background-color: #6e9b06;
+    margin: 0 10px ;
+    border-radius: 5px;
+    padding: 3px;
+  }
+}
+
+.CompanyName {
+  margin-left: 10px;
+}
+
+.NavBar {
+  
+    padding: 5px 15%;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center; 
+}
+
+.navBarLinksWrapper > a {
+    font-size: 0.8vw;
+    text-decoration: none;
+    color: #000000;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.navBarLinksWrapper > a::after {
+    content: ' | ';
+}
+
+.MenuShowHideBtn {
+    font-weight: bold;
+    font-size: 4vw;
+    color: #dfffff;
+    cursor: pointer;
+    display: none;
+    padding: 10px;
+}
+
+
+  .active {
+    animation: 0.35s ease-out 0s 1 menuLinkTransition;
+    color: #004e61 !important;
+    display: inline-block;
+  }
+
+  .NavBarWrapper {
+    min-height: 105px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #ccc;
+}
+
+
+.contactInfoBar {
+ 
+  background-color: grey;
+  border-radius: 0 0 10px 10px;
+  padding: 2px 0;
+}
+
+
+.navBarLinksWrapper {
+    padding-left: 20px;
+}
+
+.not-pinned {
+min-height: 50px;
+}
+
+//ANIMATION
+@keyframes menuLinkTransition {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop{
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//MOBILE
+@media only screen and (max-width: 800px) {
+  .MainLogo {
+    height: 50px;
+    width: 50px;
+  }
+
+  .slogan {
+    font-size: 2vw !important;
+  }
+
+  .NavBar > a,
+  .MainHeaderTitle,
+  .mainSlogan  {
+      font-size: 3.5vw !important;
+  }
+
+  .NavBar {
+    animation: 0.65s ease-out 0s 1 slideInFromTop;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    padding: 0;
+  }
+
+  .NavBar > a {
+    text-align: left;
+    background-color: #7e7e7e;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+    &::after {
+      content: '';
+    }
+  }
+
+
+
+  .MenuShowHideBtn {
+    display: block;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  .NavBarWrapper {
+      padding-right: 30px;
+      text-align: right;
+  }
+}
+
+
+
