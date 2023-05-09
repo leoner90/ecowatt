@@ -1,194 +1,58 @@
-
 import './css/Contacts.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faEnvelope,faMapLocationDot,faAddressCard,faTriangleExclamation,faEnvelopeCircleCheck , faPlus} from '@fortawesome/free-solid-svg-icons'
-import { faDiscord, faWhatsapp } from '@fortawesome/free-brands-svg-icons'
-import React, {useState } from 'react';
-
-
+import { faPhone, faEnvelope,faMapLocationDot,faAddressCard} from '@fortawesome/free-solid-svg-icons'
+import EmailForm from '../components/sendMailForm/EmailForm.jsx'
 
 
 
 function Contacts() {
-    let url = `sendEmail.php`;
-    const [senderName, setSenderName] = useState('');
-    const [senderSurname, setSenderSurname] = useState('');
-    const [userMsg, setuserMsg] = useState('');
-    const [userEmail, setUserEmail] = useState('');
-    const [errSuccessMsg, setErrSuccessMsg] = useState([]);
-    
-    function toggleEmailLoader() {
-        let loader = document.getElementById('loaderWrapper');
-        loader.style.display = "none";
-    }
 
-    function clearAllMsgShowSuccces(){
-        setSenderName('');
-        setSenderSurname('');
-        setuserMsg('');
-        setUserEmail('');
-        setErrSuccessMsg([])
-        let succesMsgWrapper = document.getElementById('SuccesWrapper');
-        succesMsgWrapper.style.display = "flex";
-    }
-
-    function sendEmail(e) {
-        e.preventDefault();
-        let formData = new FormData();
-        formData.append('name', senderName);
-        formData.append('surname', senderSurname);
-        formData.append('msg', userMsg);
-        formData.append('email', userEmail);
-
-        const requestOptions = {
-            method: 'POST',
-            mode: "cors",
-            enctype: 'multipart/form-data',
-            body: formData
-        }
-
-        let loader = document.getElementById('loaderWrapper');
-        
-        loader.style.display = "flex";
-        fetch(url , requestOptions)
-        .then((response) => response.json())
-        .then(data => {
-            if(data === 200) {
-                setTimeout(toggleEmailLoader, 500);
-                setTimeout(clearAllMsgShowSuccces, 500);
-                
-        
-            } else {
-                setErrSuccessMsg(data);
-            }
-            setTimeout(toggleEmailLoader, 500);
-            
-      
-        }).catch(err => {
-            setTimeout(toggleEmailLoader, 500);
-            setErrSuccessMsg('err')
-        })
-    }
-
-    function sendOnotherMsg(){
-        let succesMsgWrapper = document.getElementById('SuccesWrapper');
-        succesMsgWrapper.style.display = "none";
-    }
-
- 
-return (
-<div className="Contacts">
-    <div className='ContactsDetails'>
-        {/* Address */}
-        <h3 className='ContactFormHeader'>
-            <FontAwesomeIcon className='contactsFontAwesome' icon={faMapLocationDot} />
-            Address
-        </h3>
-        <div className='AddressWrapper'>
-        
-            <div className='AddressAndMapWrapper'>
-                <div style={{padding: '2%'}}>
-                    St Martin's Church Hall, Church Street,<br /> Epsom, Surrey<br />
-                    KT17 4PX<br />
-                    Visits by appointment only.
-                </div>    
-                <iframe title="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2492.908157660294!2d-0.2609229842365049!3d51.33120907960647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4875e2138025ee11%3A0x7e34c1ed3cbb47cd!2sSt%20Martin&#39;s%20Parish%20Church%2C%20Epsom!5e0!3m2!1slv!2suk!4v1653574128986!5m2!1slv!2suk" style={{width: '100%', flex: '1 0 45%'}} height={280}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+    function ContactSlot (icon, headerText , body) {
+        return (
+          
+            <div>
+                <div className='contactSlotImg'><FontAwesomeIcon className='contactsFontAwesome' icon={icon} /></div>
+                <div className='contactSlotText'>
+                    <h4> {headerText} </h4>
+                    <p> {body} </p>
+                </div>
             </div>
+        )
+    }
+
+return (
+<div>
+    <div className="Contacts">
+        <div className="FormContainer">
+            <EmailForm />
         </div>
-        {/* Contacts */}
+
+        <div className='ContactsDetails'>  
         <h3 className='ContactFormHeader'>
-            <FontAwesomeIcon className='contactsFontAwesome' icon={faAddressCard} />
-            Contacts
-        </h3>
-    <div className='ContactsWrapper'> 
-    
-            <p>
-                <FontAwesomeIcon className='contactsFontAwesome' icon={faPhone} />
-                07 535 796 472
-            </p>
-            <p>
-                <FontAwesomeIcon className='contactsFontAwesome' icon={faEnvelope} />
-                bakerjanice746@gmail.com  
-            </p>
-            <p>
-                <a className='Discord' href='https://discord.gg/62kFWR72Pv' target={'blank'}>
-                    <FontAwesomeIcon className='contactsFontAwesome' icon={faDiscord} />
-                    <span> JOIN US ON DISCORDE </span>
-                </a>
-            </p>
-            
-            <p>
-                <a className='Discord' href='https://chat.whatsapp.com/KUkCSGbYLFkCihuAnRhYdW' >
-                    <FontAwesomeIcon className='contactsFontAwesome' icon={faWhatsapp} />
-                    <span> JOIN US ON WHATSAPP </span>
-                </a>
-            </p>
+                    <FontAwesomeIcon className='contactsFontAwesome' icon={faAddressCard} />
+                    KONTAKTINFORMĀCIJA
+                </h3>
+            <div className='ContactsWrapper'> 
+               
+                {ContactSlot(faPhone ,"Telefona numurs",'+371 2672 2829')}
+                
+                {ContactSlot(faEnvelope ,"E-pasts",'info@msgrupa.lv')}
+
+                {ContactSlot(faMapLocationDot ,'Juridiska Adrese' , 'Festivāla iela 1 - 38, Rīga, LV-1057')}
+       
+            </div>       
+            <p  className='openTime'>
+                    <FontAwesomeIcon className='contactsFontAwesome' icon={faMapLocationDot} />
+                    Darba Laiks: <br />
+                    Pirmdiena - Piektdiena: no 8:00 līdz 17:00 <br />
+                    Sestdiena - Svētdiena: no 10:00 līdz 14:00
+            </p>  
         </div>
         
-                
     </div>
 
-
-    <h3 className='ContactFormHeader'>Contact Form</h3>
-
-    <div className="FormContainer">
-    <div id='loaderWrapper'>
-    <div className="loader"></div>
-    <p>Sending...</p>
-    </div>
-
-    <div id='SuccesWrapper'>
-    <div className="success">
-    <p>
-        <FontAwesomeIcon className='successMsgAwesomeIcon'  icon={faEnvelopeCircleCheck} />
-        Message Sent Successfully
-    </p>
-    </div>
-    <button className='sendOnotherMsgBtn' onClick={()=> sendOnotherMsg()}>
-    Send One More   
-    <FontAwesomeIcon className='sendOnotherMsgAwasomeIcon'  icon={faPlus} />
-    </button>
-    </div>
-
-    <div className='errMsgAligner'>
-    {errSuccessMsg.map((err, index) => { 
-    return (
-        <p className='errMsg' key={index}>
-            <FontAwesomeIcon className='errorAwesomeIcon' icon={faTriangleExclamation} />
-            {err}
-        </p>
-    )
-    })}
-    </div>
-
-
-
-    <form >
-    <div className='NameSectionWrapper'>
-    <div className='NameLabel'>Tell Us Your Name *</div>
-    <div className='formFullNameWrapper'>
-    <input type="text" value={senderName} id="fname" name="firstname" placeholder="First Name" onChange={(e)=> setSenderName(e.target.value)}/>
-    <input type="text" value={senderSurname} id="lname" name="lastname" placeholder="Last Name.." onChange={(e)=> setSenderSurname(e.target.value)}/>
-    </div>
-    </div>
-
-    <div className='NameSectionWrapper'>
-    <div className='NameLabel'>Enter Your Email *</div>
-    <div className='formFullNameWrapper'>
-    <input type="text" value={userEmail}  name="email" placeholder="Email" onChange={(e)=> setUserEmail(e.target.value)}/>
-    </div>
-    </div>
-
-    <div className='NameSectionWrapper'>
-    <div className='NameLabel'>Message*</div>
-    <div className='formFullNameWrapper'>
-    <textarea value={userMsg} placeholder="Write something.." onChange={(e)=> setuserMsg(e.target.value)}></textarea>
-    </div>
-    </div>
-
-
-    <input className='ContactFormSubmitBtn' type="submit" value="Submit" onClick={(e)=> sendEmail(e)}/>
-    </form>
+    <div className='googleMapWrapper'>
+        <iframe title="googleMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2178.621207499867!2d24.200363877474384!3d56.903880973531955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46eed214d98ad551%3A0xdf4486e66cb04e9c!2zRmVzdGl2xIFsYSBpZWxhIDEsIExhdGdhbGVzIHByaWVrxaFwaWxzxJN0YSwgUsSrZ2EsIExWLTEwNTc!5e0!3m2!1sen!2slv!4v1683408821849!5m2!1sen!2slv" style={{width: '100%', flex: '1 0 45%'}} height={380}  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 )

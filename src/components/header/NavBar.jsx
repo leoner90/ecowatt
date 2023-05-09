@@ -52,21 +52,18 @@ function NavBar() {
                     </NavLink>
 
                     <NavLink
-                    to={`${process.env.PUBLIC_URL}/Gallery`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}> ELEKTROMONTAZ
+                    to={`${process.env.PUBLIC_URL}/PROJEKTESANA`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}> ELEKTROMONTAZ
                     </NavLink>
 
                     <NavLink
-                    to={`${process.env.PUBLIC_URL}/prices`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}> SAULES PANELI
+                    to={`${process.env.PUBLIC_URL}/solarPanel`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}> SAULES PANELI
                     </NavLink>
 
                     <NavLink
-                    to={`${process.env.PUBLIC_URL}/contacts`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}> KONTAKTI
+                    to={`${process.env.PUBLIC_URL}/contacts`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}> 
+                        <button className='contacstBtn'>KONTAKTI</button>
                     </NavLink>
 
-                    <NavLink
-                    to={`${process.env.PUBLIC_URL}/prices`} onClick={() => { showMobileNavBar(); window.scrollTo(0, 0); }}>
-                        <button>APREKINAT IZMAKSAS</button>
-                    </NavLink>
                 </div>
 
 

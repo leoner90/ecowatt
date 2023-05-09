@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+$base-padding: 15%;
 
 .MainLogo {
     animation: 1.85s ease-out 0s 1 slideInFromLeft;
@@ -10,7 +11,10 @@
     background-position: center;
 }
 
+ 
+
 .contactInfo {
+  padding:  0 $base-padding;
   display: flex;
   height: 32px;
   background-color: rgb(132, 189, 0);
@@ -30,19 +34,7 @@
   margin-left: 10px;
 }
 
-.NavBar {
-  
-    padding: 5px 15%;
-    height: 100%;
-    border-radius: 0 0 5px 5px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    align-items: center; 
-}
+
 
 .navBarLinksWrapper > a {
     font-size: 0.8vw;
@@ -54,7 +46,10 @@
 
 .navBarLinksWrapper > a::after {
     content: ' | ';
+  
 }
+
+ 
 
 .MenuShowHideBtn {
     font-weight: bold;
@@ -67,12 +62,13 @@
 
 
   .active {
-    animation: 0.35s ease-out 0s 1 menuLinkTransition;
     color: #004e61 !important;
     display: inline-block;
   }
 
   .NavBarWrapper {
+    z-index: 99;
+    transition: 0.35s;
     min-height: 105px;
     position: -webkit-sticky;
     position: sticky;
@@ -81,11 +77,11 @@
     align-items: center;
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #ccc;
+  
 }
 
 
 .contactInfoBar {
- 
   background-color: grey;
   border-radius: 0 0 10px 10px;
   padding: 2px 0;
@@ -97,34 +93,44 @@
 }
 
 .not-pinned {
-min-height: 50px;
+  min-height: 50px;
+  transition: 0.75s;
 }
+
+.NavBar {
+  padding: 5px 15%;
+  height: 100%;
+  border-radius: 0 0 5px 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center; 
+  width: 100%;
+}
+
+.contacstBtn {
+  padding: 5px 7px;
+  border-radius: 10px;
+  background-color: #750000;
+  color: #fff;
+}
+
 
 //ANIMATION
-@keyframes menuLinkTransition {
-  0% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes slideInFromLeft {
   0% {
     transform: rotate(-180deg);
+    filter: grayscale(100%);
+  }
+  40% {
+    filter: grayscale(100%);
   }
   100% {
     transform: rotate(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0);
+    filter: grayscale(0%);
   }
 }
 
@@ -189,6 +195,4 @@ min-height: 50px;
       text-align: right;
   }
 }
-
-
 
