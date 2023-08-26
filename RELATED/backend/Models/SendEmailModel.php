@@ -39,11 +39,8 @@ class SendEmailModel
             $errors['errors']['lv'][] = 'Jūsu e-pasts ir nepareizs';
         }
 
-        //RECAPTCHA CHECK msgrupa key -> 6LczzbkmAAAAAG3QKg3cuvLmzgjvI_Mx1mOT7Ery
-        // local 6LdV3rkmAAAAAIQhhvstLaTj4UBKU3QRVKaRGSkZ
-        //ecowat RIGA 6LfI4hUnAAAAAOPesI9BqmENCEl9UwM_36x6jRcT
         $url = 'https://www.google.com/recaptcha/api/siteverify';
-        $data = ['secret'   => '6LfW41gnAAAAAGzUswE9_sYw3UcmScD2l6bsWfak',
+        $data = ['secret'   => 'SEKRET KEY',
                     'response' =>  $token];
                     
         $options = [
@@ -75,8 +72,8 @@ class SendEmailModel
            $mail->isSMTP();                                           
            $mail->Host       = ' smtp.gmail.com ';   
            $mail->SMTPAuth   = true; 
-           $mail->Username   = 'msgrupa.lv@gmail.com';
-           $mail->Password   = 'bykqlkclcnxhxiqw';
+           $mail->Username   = 'ecowatt.riga@gmail.com';
+           $mail->Password   = 'SECRET KEY';
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
            $mail->Port       = 465; 
            $mail->SMTPSecure = "ssl";

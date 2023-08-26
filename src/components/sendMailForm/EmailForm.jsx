@@ -167,13 +167,10 @@ function EmailForm () {
                 </div>
 
                
-                {/* msgrupa key 6LczzbkmAAAAAGFsdALrvkYgfSGIHtUpY6GNQOls 
-                localhost 6LdV3rkmAAAAAOu7dQnPLEhfbJM6b9eT-pYr-pAn
-                ecowatt 6LfW41gnAAAAAN3GxOzsv_Lh3KUUCbXJul_QfKRP
-                */}
+        
                 <ReCAPTCHA
                 className='recaptchaClass'
-                sitekey={"6LfW41gnAAAAAN3GxOzsv_Lh3KUUCbXJul_QfKRP"}
+                sitekey={"6LePj9gnAAAAAAH3cbZ6fJPongduuX4Ep0QrlLeQ"}
                 size="invisible"
                 ref={recaptchaRef}
                 badge="inline"

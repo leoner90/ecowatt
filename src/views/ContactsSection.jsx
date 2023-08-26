@@ -17,7 +17,7 @@ function Contacts() {
                 </div>
                 <div className='contactSlotText'>
                     <h4 className='contactSlotHeader'> {headerText} </h4>
-                    <p> {BodyText} </p>
+                    <div> {BodyText} </div>
                 </div>
             </div>
         )

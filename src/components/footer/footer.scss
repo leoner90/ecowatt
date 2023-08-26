@@ -183,8 +183,8 @@
   }
 
   .footerContactSlotText{
-    & > p {
-      font-size: 1.2vw;
+    & > div {
+      font-size: 1.2vw !important;
     }
   }
 
@@ -232,8 +232,8 @@
 
   .footerContactSlotText,
   .footerContactSlotHeader{
-    & > p {
-      font-size: 1.6vw;
+    & > div {
+      font-size: 1.6vw !important;
       margin:  0;
     }
    }
@@ -284,7 +284,7 @@
    }
 
   .footerContactSlotText{
-    & > p {
+    & > div {
       font-size: 2.5vw !important;
     }
    }

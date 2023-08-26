@@ -55,8 +55,9 @@ function Footer() {
   }
   return (
     <div style={{position: 'relative'}}> 
-        <video autoPlay muted loop id="myVideo">
-            <source src={`${process.env.PUBLIC_URL}/img/footer.mp4`} type="video/mp4" />
+        <video autoPlay muted loop id="myVideo" playsInline>
+        {/* ${process.env.PUBLIC_URL} */}
+            <source src={`./img/footer.mp4`} type="video/mp4" />
             Your browser does not support HTML5 video.
         </video>
     <div id="Footer" className="Footer" >
@@ -76,7 +77,7 @@ function Footer() {
 
       
       </div>
-      <div className="footerImage" style={{backgroundImage: `url("${process.env.PUBLIC_URL}/img/footerBg.png")`}}>
+      <div className="footerImage" style={{backgroundImage: `url("./img/footerBg.png")`}}>
         <div id="footerContacts" className='footerContacts'>
           
           <div className='ContactsWrapper'> 
