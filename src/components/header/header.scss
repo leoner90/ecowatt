@@ -1,0 +1,477 @@
+@import '../../variables';
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@1,200&display=swap');
+
+.dropDownMenu {
+  display: inline-block;
+ 
+ .dropDownItself {
+  transition: 1s;
+  display: inline-block;
+    display: none;
+    background-color: $dropDownBgColor ;
+    position: absolute;
+    text-align: left;
+    a {
+      min-width: 180px;
+      word-break: keep-all;
+      padding-top: 10px;
+      display: block;
+      padding: 10px;
+      text-align: left;
+      margin: 0;
+      &:hover {
+        background-color: #00727fea;
+      }
+    }
+  }
+
+ 
+
+}
+
+.faCaretDown {
+  margin: 5px;
+}
+
+.mobileHide {
+  display: block;
+}
+
+.MainLogo {
+  // animation: 1.85s ease-out 0s 1 slideInFromLeft;
+  z-index: 2;
+  height: 76px;
+  width: 76px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 5px;
+  cursor: pointer;
+ 
+  
+}
+
+.CompanyName {
+  font-family: 'Serif Pro', serif;
+  text-shadow: 0.1px 0.1px #c0c0c0;
+  margin-left: 5px;
+  letter-spacing: 0.65px;
+  font-size: 0.95vw;
+  font-style: italic;
+  color: #fff;
+  // font-weight: bold;
+  display: flex;
+  align-items: center;
+
+}
+
+.navBarLinksWrapper a, 
+.fakeLink {
+  font-size: 0.9vw;
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  margin-right: 20px;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &:visited {
+    color: #fff ;
+  }
+}
+
+.DesctopMenuShow > .navBarLinksWrapper .active {
+  box-shadow: none;
+  color: #fff !important;
+  text-shadow: 2px 2px 3px #004f58;
+  font-weight: 900;
+
+}
+
+
+
+.navBarLinksWrapper >a:first-of-type::before {
+  content: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.MenuShowHideBtn {
+  font-weight: bold;
+  font-size: 4vw;
+  color: #dfffff;
+  display: none;
+  padding: 20px 10px 20px 20px;
+}
+
+.navBarLinksWrapper   .contactsBtn {
+  padding: 5px  20px ;
+  min-width: 100px;
+  background-color: #008591;
+  font-size: 0.9vw;
+}
+
+.contactsBtn {
+  padding: 7px 7px;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  background-color: #6e0000;
+  color: #fff;
+  font-weight: bold;
+  min-width: 200px;
+  font-size: 1.2vw;
+  cursor: pointer;
+}
+
+.active {
+  font-weight: 900;
+  color: #8bf3ff !important;
+}
+
+#html {
+  overflow: auto;
+}
+  .NavBarWrapper { 
+  z-index: 99999 !important;
+  transition: 0.35s;
+  min-height: 95px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  display: flex;
+  align-items: center;
+  background-color: $NavBarPinnedCollor ;
+  
+}
+
+.caretForMobileMenu {
+  display: none;
+}
+
+.navBarLinksWrapper {
+  flex: 1;
+  text-align: right;
+}
+
+.not-pinned {
+  min-height: 75px !important;
+  //transition: 0.4s;
+  background-color: $NavBarNotPinnedCollor ;
+  border-bottom: 1px solid #ccc;
+
+  & .MainLogo {
+    height: 46px;
+    transition: 0.5s;
+  }
+}
+
+.NavBar {
+  padding: 0px $base-padding;
+  height: 100%;
+  border-radius: 0 0 5px 5px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center; 
+  width: 100%;
+}
+
+
+
+
+
+
+//ANIMATION
+@keyframes slideInFromLeft {
+  0% {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    filter: grayscale(100%);
+  }
+  40% {
+    filter: grayscale(100%);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    filter: grayscale(0%);
+  }
+}
+
+@keyframes slideInFromTop{
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+}
+ 
+
+//SMALL DESKTOP
+
+@include forSmallDesktop {
+  .NavBar {
+       padding: 0 $small-display-padding ;
+  }
+
+  .CompanyName,
+  .navBarLinksWrapper  a,
+  .fakeLink  {
+    font-size: 1.1vw;
+  }
+
+  .CompanyName{
+    font-size: 1.4vw;
+  }
+}
+
+
+//TABLET
+@include for-tablet-design {
+  
+  .navBarLinksWrapper  {
+    padding-right: 0;
+    a {
+      margin-right: 10px;
+    }
+  }
+  .NavBar {
+       padding: 0 5%;
+  }
+  .navBarLinksWrapper  a,
+  .fakeLink   {
+    font-size: 1.2vw;
+  }
+
+  .CompanyName{
+    font-size: 1.6vw;
+  }
+
+  .MenuShowHideBtn {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .NavBar {
+    padding: 0 $base-padding-mobile ;
+    bottom: 0;
+    justify-content: normal !important;
+    flex-direction: row !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 99;
+    animation: 0.65s ease-out 0s 1 slideInFromTop;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    padding: 0;
+    background-color:#004f58;
+    min-height: 100vh
+  }
+
+.dropDownItself {
+ display: block;
+ padding-left: 20px;
+ background-color: transparent !important;;
+ a {
+   display: block !important;
+   &::before {
+     content: "> ";
+   }  
+ }
+}
+
+.caretForMobileMenu {
+ display: inline-block;
+ color: #036400;
+ padding-right: 10px;
+ font-size: 3vw;
+}
+
+.CompanyName,
+.navBarLinksWrapper  a,
+.fakeLink  {
+ font-size: 2.5vw;
+ align-items: center;
+ display: flex !important;
+}
+
+  .DesktopLogo {
+    display: none;
+  }
+
+  .mobileHide{
+    display: none;
+  }
+  
+  .dropDownItself {
+ 
+    display: block;
+      position: relative !important;
+  }
+
+  .MenuShowHideBtn .logoWrapper {
+    flex: 1;
+  }
+
+  .logoWrapper{
+    justify-content: normal !important;
+    padding-left: 10%;
+  }
+
+  .MainLogo {
+    height: 35px;
+    width: 35px;
+   
+  }
+ 
+
+ 
+    
+  .NavBar {
+    padding: 0 $base-padding-mobile ;
+    bottom: 0;
+    justify-content: normal !important;
+    flex-direction: row !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 99;
+    animation: 0.65s ease-out 0s 1 slideInFromTop;
+    position: fixed;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    display: none;
+    padding: 0;
+    background-color:#004f58;
+    min-height: 100vh
+  }
+
+  .NavBar .MenuShowHideBtn {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fafafa;
+    display: flex;
+    background-color: #212b35;
+    min-height: 100vh;
+    flex: 1;
+
+    .MenuShowHideBtn{
+      align-items: center;
+    }
+  }
+
+  .navBarLinksWrapper  {
+    flex: 5 ;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 0;
+  }
+
+
+
+
+  .NavBar > a {
+    text-align: left;
+    background-color: #7e7e7e;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 10px 15px;
+  }
+
+
+ 
+  .NavBarWrapper {
+    padding-right: 30px;
+    text-align: right;
+ 
+  
+  }
+
+  .contactsBtn {
+    font-size: 2vw !important;
+  }
+
+  .dropDownItself .navBarLinksWrapper{
+    padding: 0 !important;
+    a{
+      color: #fff;
+    }
+    a::before {
+      content: "-";
+    }
+  }
+  .navBarLinksWrapper {
+    padding-left: 60px;
+    text-align: left;
+     
+    > a, .fakeLink {
+      font-size: 2.5vw;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+      margin: 3% 0;
+      cursor: pointer;
+      display: block;
+
+      &::before {
+        content: '';
+      }
+    }
+  }
+}
+
+
+
+//MOBILE
+@include for-mobile-design{
+  .caretForMobileMenu {
+    font-size: 4vw;
+   }
+
+   .navBarLinksWrapper > a, .fakeLink {
+      font-size: 3.5vw !important;
+    }
+    
+    .navBarLinksWrapper {
+      padding-left: 40px;
+    }
+
+    .navBarLinksWrapper  {
+      flex: 4 ;
+    }
+
+    .NavBarWrapper {
+ 
+      min-height: 75px ;
+    }
+}

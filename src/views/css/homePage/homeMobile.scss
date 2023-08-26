@@ -1,0 +1,199 @@
+
+@include for-mobile-design {
+
+    .solarPowerContentWrapper,
+    .electroPowerContentWrapper {
+        div ,a {     
+            
+            width: 100%;
+        }
+
+        
+    }
+
+    
+
+    .ElectroWorksWeDoWrapper {
+        padding: 3% $base-padding-mobile;
+    }
+
+    .HomeAboutText {
+        padding: 0 $base-padding-mobile;
+    }
+
+    .solarWorksWrapper {
+        padding: 3% $base-padding-mobile;
+    }
+
+    .MapSection {
+        padding: 0 $base-padding-mobile 6% $base-padding-mobile  ;
+    }
+ 
+
+    .ribbon {
+        min-width: 1px;
+        height: 50px;
+        font: 14px/50px sans-serif;
+    }
+    .electritionWorksWrapperImg {
+    
+        background-size: cover;
+        background-attachment: scroll;
+        background-position: bottom;
+    }
+
+    
+    .priceHeader ,
+    .priceLeftSide, 
+    .priceItself {
+        font-size: 2.1vw !important;
+        padding: 0 10px 0 0 !important;
+    }
+
+    .priceSectionHeader {
+        font-size: 2.5vw !important;
+    }
+
+    .priceBlock {
+        padding: 10px !important;
+       
+    }
+
+    .pricesWrapper {
+        margin: 0%  $base-padding-mobile !important;
+    }
+    .active {
+        box-shadow: none !important;
+    }
+
+    .sunWrapper  {
+        padding: 10px !important;
+    }
+
+    .worksWeDoGeneratorHeader {
+        font-size: 3.5vw
+    }
+
+    .HeaderBottom {
+        height: 50px;
+
+    }
+
+    .HeaderSubNavigation div 
+    a,
+    a:visited ,
+
+    a:active,
+    a:focus {
+        font-size: 1.9vw;
+    }
+
+   
+
+  
+    .solarPowerContentWrapper
+    {
+        div {     
+            min-height:  5vh; 
+        }
+    }
+
+    .electroPowerContentWrapper {
+        div  {     
+            min-height:  7.5vh; 
+        }
+    }
+
+    .worksWeDoImg {
+        max-height: 30px !important;
+    }
+
+    .electroPowerContentWrapper .worksWeDoImg {
+        max-height: 60px    !important;
+    }
+   
+
+    .SolarSectionHeader,
+    .ElectroSectionHeader {
+        font-size: 3vw;
+        text-shadow: none;
+    }
+
+    .MainSlogan {
+      font-size: 9.5vw;
+    }
+    
+    .subSlogan {
+        font-size: 3.5vw;
+    }
+
+    .HeaderBottom div a {
+        font-size: 2vw;
+    }
+    
+   .contactsBtnAbout {
+        font-size: 2vw;
+        width: 100%;
+        margin-top: 15px;
+    }
+    .footerImage{
+        padding: 0 !important;
+    }
+
+    .HomeFirstSectionWrapper {
+        min-height: 98vh;
+    }
+    .coloredSetion {
+        margin-top: -75px;
+    }
+
+    .electritionBody {
+        flex-direction: column;
+    }
+    
+    .clientCountImg{
+        flex: none;
+        min-height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .clientCountRightSideImg {
+        max-height: 70px;
+    }
+
+  
+    .solarBody {
+        flex-direction: column-reverse;
+    }
+
+    .electrikImg, .solarImg {
+        flex: none;
+        height: 200px;
+    }
+
+    .clientCountRightSideHeader,
+    .WorkCountNumber{
+        font-size: 3.5vw;
+    }
+  
+    .MainSlogan {
+        font-size: 4vw;
+    }
+    
+    .subSlogan {
+        font-size: 1.9vw;
+    }
+
+    .navBarLinksWrapper a, .fakeLink {
+        font-size: 11vw !important;
+
+    }
+
+    .HeaderSubNavigation div a,
+            a:visited ,
+            a:active,
+            a:focus {
+                font-size: 1.65vw;
+            }
+
+}

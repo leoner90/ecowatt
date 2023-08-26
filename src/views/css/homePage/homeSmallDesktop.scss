@@ -1,0 +1,57 @@
+@include forSmallDesktop {
+    .solarPowerContentWrapper a,
+    .electroPowerContentWrapper a {
+        width: 50%;
+    }
+
+    .ElectroWorksWeDoWrapper {
+        padding: 3% $small-display-padding;
+    }
+
+    .HomeAboutText {
+        padding: 0 $small-display-padding;
+    }
+
+    .solarWorksWrapper {
+        padding: 3% $small-display-padding;
+    }
+
+    .MapSection {
+        padding: 0% $small-display-padding 3%  $small-display-padding;
+    }
+
+    .pricesWrapper {
+        margin: 0 $small-display-padding;
+    }
+
+    .HeaderSubNavigation div 
+    a,
+    a:visited ,
+    a:active,
+    a:focus {
+        font-size: 1.3vw;
+    }
+
+    .worksWeDoGeneratorHeader {
+        font-size: 1.3vw
+    }
+
+    .priceHeader ,
+    .priceLeftSide, 
+    .priceItself {
+        font-size: 1.3vw !important;
+ 
+    }
+
+    .MainSlogan {
+        font-size: 3vw;
+    }
+    
+    .subSlogan {
+        font-size: 1.4vw;
+    }
+
+  
+    
+    
+}

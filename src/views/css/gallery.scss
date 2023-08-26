@@ -1,0 +1,117 @@
+@import '../../variables';
+
+.gallerySectionWrapper {
+    text-align: center;
+    color: #000000;
+    opacity: 1;
+    //if forward declaration opacity it will couse z index problem and menu and footer uppear on top of pop up(which is gallery element)
+    animation: 0.75s    extraTransitionAnimation;
+    min-height: 70vh;
+    border-radius: 5px;
+    padding: 3% $base-padding 20px $base-padding;
+  .ribbon {
+    margin: 25px auto 50px auto;
+  }
+}
+
+.slick-prev:before, .slick-next:before {
+    color: #000 !important;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before   { 
+    color: #000000 !important;
+}
+
+.slick-dots {
+    position:static !important;
+}
+
+.galleryHeader {
+    font-size: 1.3vw;
+    text-align: center;
+    margin: 0 0 3% 0;
+    text-shadow: 2px 1.5px #034247;
+    letter-spacing: 1px;
+    color: #fff;
+ 
+}
+
+
+ 
+
+
+@include forSmallDesktop {
+    .gallerySectionWrapper {
+        padding:  3%  $small-display-padding  20px $small-display-padding ;
+    }
+
+    .galleryHeader {
+        font-size: 1.6vw;
+    }
+}
+
+@include for-tablet-design {
+    .gallerySectionWrapper {
+        padding:  3%  $base-padding-tablet  20px $base-padding-tablet  ;
+        min-height: 1vh;
+    }
+
+    .galleryHeader {
+        font-size: 1.8vw;
+    }
+
+    .gallerySectionWrapper .ribbon {
+        margin: 0 auto 30px auto;
+      }
+    
+  }
+  
+  @include for-mobile-design {
+    
+    .gallerySectionWrapper {
+        padding:  3%  $base-padding-mobile   20px $base-padding-mobile   ;
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    
+    .gallerySectionWrapper .slick-slider {
+        margin: 0 10%;
+    }
+
+    .galleryHeader {
+        font-size: 3vw;
+    }
+   
+}
+
+
+.gallerySectionWrapper {
+    *:focus {
+        outline: none;
+    }
+    .slick-prev:before, .slick-next:before {
+    font-size: 2vw;
+    }
+
+    .slick-prev, .slick-next {
+        width: 4vw;
+    }
+
+    .slick-prev {
+        left: -3vw;
+        padding: 0 1vw;
+    }
+
+    .slick-next {
+        right: -3vw;
+        padding: 0 1vw;
+    }
+
+    .slick-slider {
+        margin: 0 3vw !important;
+    }
+}

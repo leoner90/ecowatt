@@ -1,0 +1,43 @@
+@import '../../../variables';
+
+.homeWrapper {
+    opacity: 0;
+    animation: 1.5s forwards opacitytrans; // navigation Animation
+}
+
+.PageNotFound {
+    text-align: center;;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+
+//********** First Section
+@import 'homeFirstSection';
+
+//********** WorksWeDo Sections
+@import 'homeWorksWeDo';
+
+//********** MAP SECTION
+@import 'homeMapSection';
+
+//Main Page Header design
+@import 'headerRibbon';
+
+//*********** ANIMATION
+@import 'homeAnimation';
+
+
+//********** FOR DIFERENT SCREEN SIZES ******************//
+
+// ************ SMALL DESKTOP
+@import 'homeSmallDesktop';
+
+// ************ TABLET
+@import 'homeTablet';
+
+// ************MOBILE
+@import 'homeMobile';

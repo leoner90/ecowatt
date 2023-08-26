@@ -1,0 +1,36 @@
+import  {ElectroContentByLanguage, Prices} from "../MultiLanguageContent/MultiLanguageContentGenerator.jsx";
+import { faLightbulb  } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import  { useEffect } from "react";
+import textSpliter from "../js/textSplitter.js";
+import PriceSection from "../../components/priceSection/priceSection.jsx";
+
+ function ElectricalWorks(props) {
+  let content = ElectroContentByLanguage();
+  let prices = Prices();
+
+  useEffect(() => {
+    props.setCurentDirName(content.ElectrolightningSectionHeader)
+  },[props,content.ElectrolightningSectionHeader]);
+  
+    return (
+      <div className='ElectricalWorksContentWrapper'> 
+        <div className='ElectricalWorksText'>
+          <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectrolightningSectionHeader}</h1>
+          <div className="ElectricalWorksTextIself">
+             { textSpliter(content.ElectrolightningSectionBody,  '\n')}
+             <PriceSection price ={prices.lightningProtectionPrice} name={content.ElectrolightningSectionHeader} />
+            </div>
+        </div>
+  
+        <div className='ElectricalWorksImg' >
+          <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/zibesaizsardziba.jpg"   />
+        </div>
+      </div> 
+     
+    )
+}
+
+export default ElectricalWorks;
+
+ 

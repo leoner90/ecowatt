@@ -1,0 +1,82 @@
+@keyframes priceBlockAnimation {
+    50% {
+        transform: rotateX(-60deg);
+        color: #157e8a;
+        top:0;
+    }
+
+    100% {
+        color: #fff;
+        top:0;
+        transform: rotateX(0);
+    }
+}
+
+@keyframes WorksWeDoHoverTransit{
+    0% {  
+    }
+    100% {
+        transform: scale(1.03);
+
+    }
+}
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-30px, -30px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
+@keyframes test{
+    0% {
+        background-position-x: 100% ;
+    }
+    100% {
+        background-position-x: 1000% ;
+    }
+  }
+  
+    
+@keyframes sunrise {
+    0% {
+        box-shadow: none;
+    }
+}
+    
+@keyframes rays {
+    0% {
+        box-shadow: 
+        
+        0 0 0 3px #ffd9004b,
+        0 0 0 6px #fffb0040,
+        0 0 0 10px #FFDE0020,
+        0 0 0 12px #FFDE0010,
+        0 0 40px 10px #FFDE0010;
+    }
+    50% {
+        box-shadow: 
+        0 0 0 3px #ffdd00bd,
+        0 0 0 6px #ffc4008f,
+        0 0 0 10px #ffd0007e,
+        0 0 0 12px #ffdd0042,
+        0 0 0 16px #ffdd0046,
+        0 0 40px 20px #ffdd002f;
+    }
+
+    100% {
+        box-shadow:     
+        0 0 0 3px #ffd9004b,
+        0 0 0 6px #fffb0040,
+        0 0 0 10px #FFDE0020,
+        0 0 0 12px #FFDE0010,
+        0 0 40px 10px #FFDE0010;
+    }
+}

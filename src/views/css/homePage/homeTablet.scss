@@ -1,0 +1,61 @@
+
+@include for-tablet-design {
+  
+
+    .clientCountWrapper {
+        flex-direction: column;
+    }
+
+    .ElectroWorksWeDoWrapper {
+        padding: 3% $base-padding-tablet;
+    }
+
+    .HomeAboutText {
+        padding: 0 $base-padding-tablet;
+    }
+
+    .solarWorksWrapper {
+        padding: 3% $base-padding-tablet;
+    }
+
+    .MapSection {
+        padding: 0% $base-padding-tablet 3%  $base-padding-tablet;
+    }
+
+    .pricesWrapper {
+        margin: 0 $base-padding-tablet;
+    }
+
+    .worksWeDoGeneratorHeader{
+        font-size: 1.5vw;
+    }
+
+    .HeaderSubNavigation div 
+    a,
+    a:visited ,
+    a:active,
+    a:focus {
+        font-size: 1.5vw;
+    }
+
+    .priceHeader ,
+    .priceLeftSide, 
+    .priceItself {
+        font-size: 1.5vw !important;
+ 
+    }
+    .clientCountRightSideHeader,
+    .WorkCountNumber{
+        font-size: 2.5vw;
+    }
+
+    .MainSlogan {
+        font-size: 3.5vw;
+    }
+    
+    .subSlogan {
+        font-size: 1.7vw;
+    }
+
+   
+}

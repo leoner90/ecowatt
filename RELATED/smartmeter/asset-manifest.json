@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/smartmeter/static/css/main.caeeeddd.css",
+    "main.js": "/smartmeter/static/js/main.6e418258.js",
+    "static/js/787.bd1833b9.chunk.js": "/smartmeter/static/js/787.bd1833b9.chunk.js",
+    "index.html": "/smartmeter/index.html",
+    "main.caeeeddd.css.map": "/smartmeter/static/css/main.caeeeddd.css.map",
+    "main.6e418258.js.map": "/smartmeter/static/js/main.6e418258.js.map",
+    "787.bd1833b9.chunk.js.map": "/smartmeter/static/js/787.bd1833b9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.caeeeddd.css",
+    "static/js/main.6e418258.js"
+  ]
+}

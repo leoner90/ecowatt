@@ -1,31 +1,69 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Home from '../views/Home.jsx'
-import About from '../views/About.jsx'
-import Contacts from '../views/Contacts.jsx'
-import SolarPanel from '../views/SolarPanel.jsx'
+import Contacts from '../views/ContactsSection.jsx'
+import Gallery from '../views/Gallery.jsx'
 
-import PROJEKTESANA from '../views/ElectricalWorksPages/PROJEKTESANA.jsx'
-import ELEKTROINSTALĀCIJA from '../views/ElectricalWorksPages/ELEKTROINSTALĀCIJA.jsx'
-import ELEKTROMĒRĪJUMI from '../views/ElectricalWorksPages/ELEKTROMĒRĪJUMI.jsx'
-import ENERGOBŪVNIECĪBA from '../views/ElectricalWorksPages/ENERGOBŪVNIECĪBA.jsx'
-import ENERGOEFEKTIVITĀTE from '../views/ElectricalWorksPages/ENERGOEFEKTIVITĀTE.jsx'
-import ZIBENSAIZSARDZĪBA from '../views/ElectricalWorksPages/ZIBENSAIZSARDZĪBA.jsx'
+
+//SOLAR Landing
+import SolarLandingPage from '../views/SolarWorksPages/index.jsx'
+//Solar Content
+import Projectesana from '../views/SolarWorksPages/projectesana.jsx'
+import Invertors from '../views/SolarWorksPages/invertors.jsx'
+import Parbaude from '../views/SolarWorksPages/parbaude.jsx'
+import Montaza from '../views/SolarWorksPages/montaza.jsx'
+import Nodosana from '../views/SolarWorksPages/nodosana.jsx'
+import Sertificati from '../views/SolarWorksPages/sertificati.jsx'
+import PageNotFound from '../views/PageNotFound.jsx'
+
+// ELECTRO
+import ElectroLandingPage from '../views/ElectricalWorksPages/index.jsx'
+//ELECTRO Content
+import ProjectesanaElectro from '../views/ElectricalWorksPages/projectesana.jsx'
+import Elektroinstalacija from '../views/ElectricalWorksPages/elektroinstalacija.jsx'
+import Elektromerijumi from '../views/ElectricalWorksPages/elektromerijumi.jsx'
+import NodosanaElectro from '../views/ElectricalWorksPages/nodosana.jsx'
+import Video from '../views/ElectricalWorksPages/video.jsx'
+import Gudramaja from '../views/ElectricalWorksPages/gudramaja.jsx'
+import Zibesaizsardziba from '../views/ElectricalWorksPages/zibesaizsardziba.jsx'
 
 const Router = () => (
-    <Routes basename={'/asd'}>
+    <Routes basename={`${process.env.PUBLIC_URL}`}>
         <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
-        <Route path={`${process.env.PUBLIC_URL}/about`} element={<About />} />
-        <Route path={`${process.env.PUBLIC_URL}/Contacts`} element={<Contacts />} />
-        <Route path={`${process.env.PUBLIC_URL}/solarPanel`} element={<SolarPanel />} />
-
-        <Route path={`${process.env.PUBLIC_URL}/PROJEKTESANA`} element={<PROJEKTESANA />} />
-        <Route path={`${process.env.PUBLIC_URL}/ELEKTROINSTALĀCIJA`} element={<ELEKTROINSTALĀCIJA />} />
-        <Route path={`${process.env.PUBLIC_URL}/ELEKTROMĒRĪJUMI`} element={<ELEKTROMĒRĪJUMI />} />
-        <Route path={`${process.env.PUBLIC_URL}/ENERGOBŪVNIECĪBA`} element={<ENERGOBŪVNIECĪBA />} />
-        <Route path={`${process.env.PUBLIC_URL}/ENERGOEFEKTIVITĀTE`} element={<ENERGOEFEKTIVITĀTE />} />
-        <Route path={`${process.env.PUBLIC_URL}/ZIBENSAIZSARDZĪBA`} element={<ZIBENSAIZSARDZĪBA />} />        
+        <Route path={`${process.env.PUBLIC_URL}/*`} element={<PageNotFound />} />
+        <Route path={`${process.env.PUBLIC_URL}/contacts`} element={<Contacts />} />
+        {/* <Route path={`${process.env.PUBLIC_URL}/solarPanel`} element={<SolarPanel />} /> */}
+        <Route path={`${process.env.PUBLIC_URL}/gallery`} element={<Gallery />} />     
+        <Route path={`${process.env.PUBLIC_URL}/solar/*`} element={<SolarLandingPage />} />
+        <Route path={`${process.env.PUBLIC_URL}/electro/*`} element={<ElectroLandingPage />} />
     </Routes>
 )
 
-export { Router };
+
+
+const RouterElectro = (props) => (
+    <Routes basename={`/electro`}>
+        <Route path={`/projectesana`} element={<ProjectesanaElectro  setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/*`} element={<PageNotFound />} />
+        <Route path={`/elektroinstalacija`} element={<Elektroinstalacija setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/elektromerijumi`} element={<Elektromerijumi setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/nodosana`} element={<NodosanaElectro setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/video`} element={<Video setCurentDirName = {props.setCurentDirName}/>} />        
+        <Route path={`/gudramaja`} element={<Gudramaja setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/zibesaizsardziba`} element={<Zibesaizsardziba  setCurentDirName = {props.setCurentDirName}/>} />
+    </Routes>
+)
+
+const RouterSolar = (props) => (
+    <Routes basename={`/solar`}>
+        <Route path={`/projectesana`} element={<Projectesana setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/*`} element={<PageNotFound setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/invertors`} element={<Invertors setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/parbaude`} element={<Parbaude setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/montaza`} element={<Montaza setCurentDirName = {props.setCurentDirName}/>} />
+        <Route path={`/nodosana`} element={<Nodosana setCurentDirName = {props.setCurentDirName}/>} />        
+        <Route path={`/sertificati`} element={<Sertificati setCurentDirName = {props.setCurentDirName}/>} />
+    </Routes>
+)
+
+export {Router, RouterElectro, RouterSolar};

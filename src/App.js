@@ -1,31 +1,29 @@
 import { Router } from './router/index'
 import NavBar from './components/header/NavBar.jsx'
-import Footer from './components/Footer.jsx'
+import Footer from './components/footer/FooterRu.jsx'
+// import HeaderInfoBar from './components/headerInfoBar/headerInfoBar.jsx'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import './App.scss'
-
-//REDUX (default import store/index.js)
-import { Provider } from 'react-redux'
-import store from './store'
-
+import { useState } from "react";
 
 function App() {
+  const [showdropdownElectro, setShowdropdownElectro] = useState(false);
+  const [showdropdownSolar, setShowdropdownSolar] = useState(false);
+ 
   return (
-    <div className="App" style={{ backgroundImage: "url('./mainBg.jpg')" }}>
+    <div className="App" >
         <div>
-            <div className='contactInfo'>
-         
-                <div>msgrupa@info.lv</div>
-                <div>RU</div>
-                <div>LV</div>
-                <div className='contactInfoBar'>+371 2844 3219</div>
-            </div>
-            <NavBar />
-            <div id="BodyWrapper" className='BodyWrapper'>
-            <Provider store={store}>
+            {/* <HeaderInfoBar /> */}
+            <NavBar 
+              setShowdropdownElectro = {setShowdropdownElectro} showdropdownElectro={showdropdownElectro}
+              showdropdownSolar = {showdropdownSolar} setShowdropdownSolar={setShowdropdownSolar}
+            />
+            <div id="BodyWrapper" className='BodyWrapper' onClick={()=>{ setShowdropdownElectro(false); setShowdropdownSolar(false) }}>
               <Router />
-            </Provider>
+              <Footer />
             </div>
-            <Footer />
+           
         </div>
     </div>
   );

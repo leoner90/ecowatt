@@ -1,0 +1,373 @@
+
+.solarPowerContentWrapper,
+.electroPowerContentWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3%;
+    div ,a {     
+        box-sizing: border-box;
+        width: 33.3%;
+        min-height: 5vh;  
+        display: flex;
+        justify-content: center;
+        font-size: 1.1vw;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        .worksWeDoGeneratorHeader{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 5px 0 ;
+            z-index: 99;
+            color: #f8f8f8;
+            background-color: #3b3b3b79;
+            width: 100%;
+            text-align: center;
+            text-shadow: 2px 2px #000000;
+        }
+    }
+    div {
+        width: 100%;
+    }
+}
+
+.worksWeDoGeneratorlogo {
+    flex: 2;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    background-color: #77d7e2e1;
+    display: flex;
+    flex-direction: column;
+    animation: 200.75s infinite forwards linear test;
+    background-position-x:left ;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+
+.electroPowerContentWrapper .worksWeDoGeneratorlogo{
+    margin-left: 0;
+    margin-right: 5px;
+}
+
+.worksWeDoGeneratorWrapper {
+    background-color: #013f49;
+    display: flex;
+    margin: 4%;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px #004f58;
+    border: 7px solid #024049;
+    border-radius: 10px;
+}
+
+
+
+
+.sun {
+    width: 20px !important;
+    height: 20px !important;
+    min-height: 20px !important;
+    background-color: #FFDE00;
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 4px #FFDE0080,
+        0 0 0 8cap #FFDE0040,
+        0 0 0 12px #FFDE0020,
+        0 0 0 16px #FFDE0010,
+        0 0 0 20px #FFDE0000,
+        0 0 40px 20px #FFDE0010;
+    animation:
+        sunrise 2s infinite linear forwards,
+        rays 3s infinite ease;
+}
+
+
+.sunWrapper {
+    justify-content: flex-end !important;
+    padding: 15px;
+}
+
+.worksWedoImgWrapper{
+    display: flex;
+    align-items: flex-end;
+}
+
+
+  
+.pricesWrapper {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #004c55;
+    background-color: #157e8a;
+    color: #fff;
+    border-radius: 15% 0;
+     padding:   15px;
+     padding-left: 10px;
+    margin: 0 $base-padding;
+
+    -moz-box-shadow: 1px  1px  13px #0093a4;
+    -webkit-box-shadow: 1px  1px  13px #0093a4;
+    box-shadow: 1px 1px  13px #0093a4;
+}
+
+.priceLeftSide {
+    border-radius: 15% ;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    border-right: 3px solid #fff;
+    padding: 45px;
+    font-size: 1vw;
+}
+
+.priceRightSide {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+.priceHeader {
+    padding-left: 30px;
+    flex: 3;
+    border-right: 1px solid #ccc;
+    margin: 0;
+    font-size: 1vw;
+}
+
+.priceItself {
+    text-align: center;
+    flex: 2;
+    margin: 0;
+    font-size: 1vw;
+}
+
+
+.clouds path {
+    fill: #77d7e2;
+    stroke: #77d7e2;
+}
+
+.cloudsReverse {
+    transform: rotate(180deg); 
+    margin-top: -2px;
+}
+
+.clouds{
+    display: flex !important;
+}
+
+.cloudsNormal {
+    margin-bottom: -2px;
+}
+
+.priceBlock{
+    position: relative;
+    transform: rotateX(-90deg);
+    top: -100%;
+    padding: 12px 5px;
+    flex: 1;
+    display: flex;
+    border-bottom: 3px solid #fff;
+    &:hover {
+        background-color: #126e79;
+        border-radius: 0 0 25% 0;
+        cursor: default;
+        &:last-of-type {
+            border-radius: 0 0 44% 44% ;
+        }
+     }
+
+     &:last-of-type {
+        border: none;
+     }
+     color: #157e8a;
+}
+
+ 
+@for $i from 1 through 10 {
+    .priceBlockAnimationObserver  .priceBlock:nth-child(#{$i}n) {
+        animation-delay: #{$i * 0.05}s;
+    }
+}
+
+.priceBlockAnimationObserver  .priceBlock{
+    animation: priceBlockAnimation 0.6s  forwards;
+}
+
+.priceSectionHeader {
+    margin: 0;
+    background-color: #157e8a;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 60px;
+    border-radius: 5px 5px 0 0;
+    font-size: 1vw;
+}
+
+.priceHeaderSvg,
+.euroSignSvg{
+    margin-right: 10px;
+    color: #97c911;
+}
+
+.euroSignSvg{
+    margin-left: 5px;
+}
+
+
+.worksWeDoGeneratorBody {
+    flex: 5;
+    padding: 0;
+    position: relative;
+    margin: 0;
+}
+
+.arrowWrapper {
+    background-color: #013f49;
+}
+
+.worksWeDoImg {
+    max-height: 60px;
+    padding: 0 10px 0 10px;
+    filter: brightness(0) invert(0.3);
+}
+
+.electroPowerContentWrapper .worksWeDoImg {
+    filter: none;
+    max-height: 120px;
+    padding-top: 5px;
+}
+
+
+.arrow {
+    position: absolute;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+.arrow span {
+    position: absolute;
+    display: block;
+    width: 1.15vw;
+    height: 1.15vw;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    animation: animate 2.5s infinite;
+}
+
+.arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+}
+
+.arrow span:nth-child(4) {
+    animation-delay: -0.6s;
+}
+
+.worksWeDoGeneratorBodyImg {
+    background-position: center center;
+    align-items: baseline !important;
+     position: absolute;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     top: 0;
+     background-size: cover;
+     width: 100% !important;
+     filter: grayscale(30%) ;
+     margin: 0 !important;
+}
+
+.worksWeDoGeneratorWrapper {
+    position:relative;
+    overflow:hidden;
+    &:after {
+        content: "";
+        position:absolute;
+        margin:-30px;
+        left: 0;
+        width:60px;
+        height:60px;
+        transform:rotate(45deg);
+        background-color:#005a68e6;
+    }
+}
+
+
+.solarPowerContentWrapper
+.worksWeDoGeneratorlogo  {
+    background-color: #004f58;
+}
+
+.ElectroWorksWeDoWrapper {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-size: cover;
+    
+    min-height: 70vh;
+    background-color: $coloredSection ;  
+    padding: 3% $base-padding;
+    background-position: right;
+}
+
+.worksWeDoGeneratorWrapper:hover {
+    animation: 0.75s forwards WorksWeDoHoverTransit;
+}
+
+.SolarWorksWrapperImg {
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.solarWorksWrapper {
+    text-align: center;
+    min-height: 65vh;
+    background-color: #fdfdfd40;
+    position: relative;
+    z-index: 1;
+    padding: 3% $base-padding;
+  }
+
+  .electritionBody,
+  .solarBody {
+    display: flex;
+  }
+
+  .electroPowerContentWrapper  .worksWeDoGeneratorWrapper:after {
+    right: 0 !important;
+    left: unset; 
+}
+.SolarSectionHeader,
+.ElectroSectionHeader {
+    text-align: center;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    text-shadow: 2px 1.5px #034247;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #fff;
+   
+}
+
+.electrikContent,
+.solarPowerContentWrapper {
+    flex: 3;
+    word-break: keep-all;
+}
+
+.solarPowerContentWrapper .worksWeDoGeneratorWrapper {
+    flex-direction: row-reverse;
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}

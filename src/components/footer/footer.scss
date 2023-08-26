@@ -1,0 +1,298 @@
+@import '../../variables';
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+.Footer {
+    background-color: $footerBgColor;
+    border-radius: 5px 5px 0 0;
+    padding: 0 $base-padding;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    position: relative;
+}
+
+.footerNavBar {
+  .active{
+   box-shadow: none !important;
+   color: #fff !important;
+  }
+}
+
+.Footer .ContactsWrapper {
+  div {
+    box-shadow: none;
+  }
+}
+
+.ContactsWrapper   .EmptyLine {
+  height: 4px !important;
+}
+
+
+.footerImage {
+  position: relative;
+  z-index: 10;
+  background-color: $footerBgColor;
+  z-index: 1;
+  min-height: 45vh;
+  background-position: top ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding: 0 23%;   
+}
+
+.footerNavBar {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin:  4% 0;
+    justify-content: center;
+    a {
+      line-height: 40px;
+      font-family: 'Oswald', sans-serif;
+      color : #fff;
+      text-transform: uppercase;
+      font-family: "Oswald";
+      margin: 0 20px;
+      line-height: 40px;
+      padding: 8px;
+      text-align: left;
+      cursor: pointer;  
+      font-size: 1.5vw;
+    }
+}
+
+.footerContacts {
+    flex: 1;
+    display: flex;
+    padding: 25px 5px;
+    margin: 0;
+    margin-left:0;
+    background-color: rgba(0,0,0,0.35);
+    font-size: 1vw;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.FooterSlogan {
+  margin-top: 0 ;
+  font-size: 1.6vw;
+}
+
+.animation {
+    animation: 0.75s ease-out 0s 1 getFooter;
+    visibility: visible;
+}
+
+@keyframes getFooter {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%)
+ 
+    }
+    100% {
+      opacity: 1;
+      transform: none;
+      
+    }
+  }
+
+ .footeMenuFontAwesome {
+  margin-right: 5px;
+ }
+
+ .footerNavBarHeader {
+  text-align: left;
+  margin: 0 10px 10px 3%;
+  font-size: 1.3vw;
+ }
+
+ .footerLogo {
+  flex: 1;
+  
+  border-left: 1px solid #fff;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+    padding-bottom: 15px;
+    .CompanyName {
+      font-size: 3vw;
+    }
+
+    .MainLogo {
+      width: 150px;
+      height: 200px;
+    }
+ }
+
+ .Footer .ContactsWrapper {
+  > div {
+    flex: 1 90%;
+    padding-bottom: 15px;
+    margin: 2%;
+  }
+ }
+
+
+ .footerContactSlotImg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 90%;
+    padding: 10px 5% 10px 10px;
+ }
+
+ .footerContactSlotText{
+  white-space: pre-line;
+  & > p {
+    font-size: 0.9vw;
+    margin:  0;
+  }
+ }
+
+ .footerContactSlotHeader {
+  margin:  0;
+ }
+
+ 
+.footeMenuFontAwesome {
+  color: #a9d400;
+}
+
+
+@include forSmallDesktop {
+  .footerImage {
+    padding: 0 17.5%;
+  }
+  .footerLogo .CompanyName {
+    font-size: 1.6vw;
+  }
+
+  .Footer {
+    padding: 0 $small-display-padding !important;
+  }
+
+  .footerNavBar {
+    a {
+      margin: 0;
+        font-size: 1.2vw;
+    }
+  }
+
+  .footerContactSlotText{
+    & > p {
+      font-size: 1.2vw;
+    }
+  }
+
+  .footerContactSlotHeader{
+    font-size: 1.1vw !important;
+   }
+}
+
+@include for-tablet-design {
+  .footerLogo .CompanyName {
+    font-size: 1.8vw;
+  }
+
+  .footerLogo {
+    border: none;
+  }
+
+  .footerNavBar {
+    a {
+        font-size: 2.2vw;
+        padding: 4px;
+    }
+  }
+
+  .center {
+    margin: 0 auto;
+    a {
+      margin-top: 10px;
+    }
+   }
+
+   .footerNavBarHeader {
+    text-align: left;
+    margin: 10px 20% ;
+    font-size: 1.4vw;
+   }
+
+  .Footer {
+    padding: 0 !important;
+  }
+
+  .Footer {
+    flex-direction: column;
+  }
+
+  .footerContactSlotText,
+  .footerContactSlotHeader{
+    & > p {
+      font-size: 1.6vw;
+      margin:  0;
+    }
+   }
+
+   .footerContactSlotHeader{
+    font-size: 1.6vw !important;
+   }
+
+  .footerContacts  {
+    margin:  0;
+    border: none;
+    padding: 10%;
+    flex-direction: column;
+  }
+
+  .ContactsWrapper {
+    padding-left: 0;
+  }
+
+  .footerImage {
+    background-size: cover;
+    padding: 0 15%;
+  }
+}
+
+@include for-mobile-design {
+  .whiteSection {
+    padding: 3% 8%;
+  }
+
+  .footerLogo .CompanyName {
+    font-size: 2.5vw;
+  }
+
+  .Footer {
+    padding: 0 $base-padding-mobile !important;
+  }
+
+  .center {
+    margin: 0 auto;
+    a {
+      font-size: 2.5vw;
+    }
+   }
+
+   .footerNavBarHeader {
+    font-size: 2.5vw;
+   }
+
+  .footerContactSlotText{
+    & > p {
+      font-size: 2.5vw !important;
+    }
+   }
+   .footerContactSlotHeader{
+    font-size: 2.5vw !important;
+   }
+}
+
+.Footer .ContactsWrapper {
+  padding: 0;
+}

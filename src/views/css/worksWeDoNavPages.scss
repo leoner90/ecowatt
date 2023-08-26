@@ -1,0 +1,380 @@
+@import '../../variables';
+.ElectricalWorksImg {
+  flex: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+.ElectricalWorksContentWrapper {
+  display: flex;
+  opacity: 0;
+  animation: 1.5s forwards extraTransitionAnimation;
+  padding-top: 40px;
+}
+
+.mobileMenuShow {
+  display: none;
+ .navBarLinksWrapper {
+    display: flex !important;
+    flex-wrap: wrap;
+
+  a {
+      margin: 0;
+      padding: 5px;
+      display: block !important;
+    }
+  }
+}
+
+.mobileMenuWrapper {
+  display: none;
+}
+
+.ElectricalWorksText {
+  border-radius: 10px;
+  padding: 0 15px;
+  margin-right: 2%;
+  flex: 1;
+  text-align: left;
+
+h1 {
+  font-size: 1.4vw;
+  background: #ebebeb;
+  text-shadow: 0.5px 0.5px 0.5px #434141;
+  padding: 20px;
+  margin: 0;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 10px 0px  15px #ccc;
+  border: 2px solid #ccc;
+  font-style: italic;
+  color: #505454;
+}
+
+  .ElectricalWorksTextIself{
+    box-shadow: 10px 5px 15px #ccc;
+    padding: 10px 30px 30px 30px;
+    margin: 0;
+    min-height: 45vh;
+    display: flex;
+    // align-items: center;
+    flex-direction: column;
+  }
+}
+
+.ElectricalWorksWrapper {
+  min-height: 70vh;
+  padding: 1% $base-padding 3.5% $base-padding;
+  text-align: center;
+
+  .navBarLinksWrapper {
+    padding: 1.2% 0 ;
+    text-align: center;
+    display: block;
+    margin-bottom: 1%;
+    background-color: rgb(192, 192, 192);
+  }
+}
+
+.electritionWorksImg{
+  margin: -5.5% 35px 40px -4.5%; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex: 1;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #000;
+}
+
+.electricPowerWorks {
+  overflow-x: hidden;
+  flex: 1;
+  padding: 20px;
+  padding-right: 0;
+}
+
+.electroWorksTransit {
+  animation: 1s ease-out 0s 1 ElectroWorksWeDoTransit;
+  visibility:visible !important;
+}
+
+.electricPowerWorks{
+  .worksWeDoContainer {
+    visibility: hidden;
+
+      .worksWeDoWrapper {
+        animation: none;
+        background-color: rgb(226 233 255);
+        color: rgb(25, 29, 41);
+        margin-left: 3% ;
+        margin-right: 0 ;
+        width: 29.5%;
+
+        .worksWeDoLogoWrapper {
+
+          .worksWeDoWrapperLogo {
+              padding: 0;     
+          }
+        }
+      }
+  }
+}
+
+.DesctopMenuShow{
+  display: block;
+} 
+
+@keyframes ElectroWorksWeDoTransit{
+    0% {
+     
+      transform: translateX(100%);
+    }
+    100% {
+       
+      transform: translateX(0);
+    }
+  }
+
+
+
+  .ElectricalWorksImgIself {
+    object-fit: contain;
+    max-width: 100%;
+    position: sticky;
+    top: 150px;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 100%;
+  }
+  
+
+
+
+ .imgLazyLoaderElectritionMainImg {
+  border: 7px solid #9eddff;
+  border-top: 7px solid #3498db;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spinLoader 1s linear infinite;
+  margin: 0 auto;
+  margin: 10px auto;
+  flex: none;
+  overflow: hidden;
+ }
+
+
+ .DesctopMenuShow > .navBarLinksWrapper {
+  padding: 2.25% 0;
+  box-shadow: 2px 2px 5px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  > a {
+    text-shadow: 1.2px 1.2px #000;
+    font-size: 0.79vw !important;
+    margin: 0;
+    
+    
+
+    &::after {
+      color: #fff ;
+      content: " |";
+      text-shadow: none;
+      margin: 0 6px;
+    }
+
+    &:last-of-type::after{
+      content: "";
+      margin: 0;
+    }
+  }
+}
+
+.electroHeaderFontAwesome ,
+.solarHeaderFontAwesome {
+  margin-right: 3px;
+  transform: rotate(5deg);
+}
+
+.EmptyLine {
+  height: 20px;
+}
+
+.textListFontAwesome {
+  margin: 0 10px 0 25px;
+  color: green;
+}
+
+.priceSection .priceBlock {
+  transform: rotateX(0);
+    top: 0;
+    padding-top: 25px;
+    margin-top: 25px;
+    border-top: 1px solid #ccc;
+    &:hover {
+      background-color: inherit;
+      border-radius: 0;
+      
+    }
+}
+
+
+@include forSmallDesktop {
+  
+
+
+  .ElectricalWorksWrapper {
+    padding: 2.5% $small-display-padding 0 $small-display-padding  !important;
+  }
+
+  .electricPowerWorks .worksWeDoContainer .worksWeDoWrapper {
+    width: 42.5%; 
+    margin: 3% 3% 3% 0;
+  }
+
+
+  .electritionWorksImg {
+    background-position: center center;
+    margin: 11% 20px 11% 0;
+}
+
+.electricPowerWorksHeader {
+  font-size: 1.6vw;
+}
+}
+
+@include for-tablet-design {
+
+  .mobileMenuShow  .navBarLinksWrapper   a {
+      font-size: 1.8vw;
+  }
+  .ElectricalWorksText {
+    h1{ 
+      font-size: 2vw;
+      margin-top: 15px;
+    }
+  }
+
+.ElectricalWorksImgIself {
+  min-height: 190px;
+  position: static;
+}
+
+.DesctopMenuShow > .navBarLinksWrapper {
+  > a {
+    font-size: 0.79vw !important;
+  }
+}
+.DesctopMenuShow{
+  display: none;
+}
+
+.mobileMenuWrapper {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #126068;
+  color: #fff;
+  font-weight: bold;
+  padding: 0px 0 5px 0;
+  border-radius: 5px;
+}
+
+.navBarLinksWrapper {
+  background-color: transparent !important;
+}
+
+.ElectricalWorksContentWrapper {
+  flex-direction: column-reverse;
+}
+
+.ElectricalWorksImg{
+  // height: 230px;
+  background-color: #fff;
+  flex: none;
+}
+
+.ElectricalWorksWrapper {
+  padding: 2.5% $base-padding-tablet 0 $base-padding-tablet  !important;
+}
+
+.electritionWorksImg {
+  min-height: 50vh;
+  margin: 0 ;
+  border-radius: 0;
+}
+
+.electricPowerWorks .worksWeDoContainer .worksWeDoWrapper {
+  width: 28.5%; 
+
+}
+
+.electricPowerWorksHeader {
+  font-size: 1.8vw;
+}
+
+.electricPowerWorks {
+
+  padding: 0 5%;
+}
+
+.ElectricalWorksWrapper .navBarLinksWrapper {
+ 
+  text-align: left;
+}
+.ElectricalWorksWrapper .navBarLinksWrapper {
+  background-color: #126068;
+
+  padding-left: 20px;
+  padding-top: 10px;
+  a::before {
+    content: "- " !important;
+  }
+}
+
+}
+
+@include for-mobile-design{
+  
+.ElectricalWorksImg {
+
+
+position: static;
+
+}
+  .ElectricalWorksText {
+    h1{ 
+      font-size: 3vw;
+      margin-top: 15px;
+    }
+  }
+
+  .ElectricalWorksWrapper {
+    padding: 2.5% $base-padding-mobile 0 $base-padding-mobile !important;
+  }
+  
+
+  
+
+
+  .electricPowerWorksHeader {
+    font-size: 3vw;
+    margin: 5% 0;
+  }
+
+  .electricPowerWorks {
+    padding: 2.5% $base-padding-mobile 0 $base-padding-mobile !important;
+  }
+
+  .electritionWorksImg{
+    min-height: 35vh;
+  }
+
+  .ElectricalWorksTextIself{
+    .priceHeader, .priceLeftSide, .priceItself {
+      font-size: 2.5vw !important;
+    }
+  }
+}
