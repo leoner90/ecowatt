@@ -1,7 +1,6 @@
 import './footer.scss'
 import Logo from '../header/Logo.jsx'
 import React, { useEffect } from "react";
- 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import SetObserver from '../../views/js/observer.js'
 import {faCaretRight, faMobileScreenButton, faEnvelopesBulk, faMapLocationDot  } from '@fortawesome/free-solid-svg-icons'
@@ -18,8 +17,7 @@ function Footer() {
   
   function linkGenerator(id, name){
     return (
-      <NavLink to={id}    
-      >
+      <NavLink to={id}>
           {fontAwesome(faCaretRight, 'footeMenuFontAwesome')}
           {name}
       </NavLink>
@@ -36,7 +34,6 @@ function Footer() {
     } catch (error) {
       observerCallBack();
     }
-   
   }, []);
 
   function ContactSlot (icon, headerText, body) {
@@ -53,47 +50,41 @@ function Footer() {
       </div>
     )
   }
+
+  let videoPath = process.env.PUBLIC_URL + '../img/footer.mp4';
+  let imgPath =  process.env.PUBLIC_URL + '../img/footerBg.png';
+  
   return (
     <div style={{position: 'relative'}}> 
-        <video autoPlay muted loop id="myVideo" playsInline>
-        {/* ${process.env.PUBLIC_URL} */}
-            <source src={`./img/footer.mp4`} type="video/mp4" />
-            Your browser does not support HTML5 video.
-        </video>
-    <div id="Footer" className="Footer" >
-  
-      {/* MENU */}
-      <div className='footerNavBar'>
-      
+
+      <video autoPlay muted loop id="myVideo" playsInline> {/* ${process.env.PUBLIC_URL} */}
+        <source src={videoPath} type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+
+      <div id="Footer" className="Footer">
+        <div className='footerNavBar'>
           {linkGenerator( '/' , navBarContent.homeLink )}
           {linkGenerator( 'solar/projectesana' , navBarContent.solarPanelLink)}
           {linkGenerator( 'electro/projectesana' , navBarContent.electroSectionLink)} 
           {linkGenerator( 'gallery' , navBarContent.galleryLink)}
           {linkGenerator( 'contacts' , navBarContent.contactsLink)}   
-       
+        </div>
       </div>
-
- 
-
       
-      </div>
-      <div className="footerImage" style={{backgroundImage: `url("./img/footerBg.png")`}}>
-        <div id="footerContacts" className='footerContacts'>
-          
+      <div className="footerImage" style={{backgroundImage: `url("${imgPath}")`}}>
+        <div id="footerContacts" className='footerContacts'> 
           <div className='ContactsWrapper'> 
-          
             {ContactSlot(faMobileScreenButton ,content.phone,'+371 2000 6560 \n \n +371 2592 7333')}
             {ContactSlot(faEnvelopesBulk ,content.mail,'ecowatt.riga@gmail.com')}
             {ContactSlot(faMapLocationDot ,content.address , 'Salaspils iela 10 , Rīga, LV-1057')}
-    
-          </div> 
-
+          </div>
           <div className='footerLogo'> 
             <Logo />
-            {/* <p className='CompanyName'>ECO VATS</p> */}
           </div>
         </div>
       </div> 
+      
     </div>
   )
 }

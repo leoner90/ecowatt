@@ -15,6 +15,7 @@
 @keyframes WorksWeDoHoverTransit{
     0% {  
     }
+
     100% {
         transform: scale(1.03);
 
@@ -26,9 +27,11 @@
         opacity: 0;
         transform: rotate(45deg) translate(-30px, -30px);
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         transform: rotate(45deg) translate(20px, 20px);
@@ -39,6 +42,7 @@
     0% {
         background-position-x: 100% ;
     }
+
     100% {
         background-position-x: 1000% ;
     }
@@ -61,6 +65,7 @@
         0 0 0 12px #FFDE0010,
         0 0 40px 10px #FFDE0010;
     }
+
     50% {
         box-shadow: 
         0 0 0 3px #ffdd00bd,

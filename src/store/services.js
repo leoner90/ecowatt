@@ -1,7 +1,6 @@
 import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react'
 
 const baseQuery = fetchBaseQuery({
-  //  `https://ecowatt.lv/backend/`;
   baseUrl: `https://ecowatt.lv/backend/`,
   prepareHeaders: (headers) => {
     //headers.set('Content-Type', 'application/json');
@@ -21,9 +20,7 @@ export const api = createApi({
     getGallery: builder.mutation({
       query: data => {
         let formData = new FormData();  
-        formData.append("data", data);
-        // JSON.stringify(data)
-       
+        formData.append("data", data); // or JSON.stringify(data)  
         return {
           mode: "cors",
           enctype: 'multipart/form-data',
@@ -45,7 +42,6 @@ export const api = createApi({
         }
       },
     }),
-
   }),
 })
 

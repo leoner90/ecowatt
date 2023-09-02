@@ -34,12 +34,35 @@
     text-shadow: 2px 1.5px #034247;
     letter-spacing: 1px;
     color: #fff;
- 
 }
 
+.gallerySectionWrapper {
+    *:focus {
+        outline: none;
+    }
 
- 
+    .slick-prev:before, .slick-next:before {
+        font-size: 2vw;
+    }
 
+    .slick-prev, .slick-next {
+        width: 4vw;
+    }
+
+    .slick-prev {
+        left: -3vw;
+        padding: 0 1vw;
+    }
+
+    .slick-next {
+        right: -3vw;
+        padding: 0 1vw;
+    }
+
+    .slick-slider {
+        margin: 0 3vw !important;
+    }
+}
 
 @include forSmallDesktop {
     .gallerySectionWrapper {
@@ -63,19 +86,18 @@
 
     .gallerySectionWrapper .ribbon {
         margin: 0 auto 30px auto;
-      }
+    }
     
-  }
+}
   
-  @include for-mobile-design {
+@include for-mobile-design {
     
     .gallerySectionWrapper {
-        padding:  3%  $base-padding-mobile   20px $base-padding-mobile   ;
+        padding:  3%  $base-padding-mobile   20px $base-padding-mobile;
         min-height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
-
     }
     
     .gallerySectionWrapper .slick-slider {
@@ -84,34 +106,5 @@
 
     .galleryHeader {
         font-size: 3vw;
-    }
-   
-}
-
-
-.gallerySectionWrapper {
-    *:focus {
-        outline: none;
-    }
-    .slick-prev:before, .slick-next:before {
-    font-size: 2vw;
-    }
-
-    .slick-prev, .slick-next {
-        width: 4vw;
-    }
-
-    .slick-prev {
-        left: -3vw;
-        padding: 0 1vw;
-    }
-
-    .slick-next {
-        right: -3vw;
-        padding: 0 1vw;
-    }
-
-    .slick-slider {
-        margin: 0 3vw !important;
     }
 }

@@ -15,7 +15,9 @@ function fontAwesome(value, className) {
 
 function NavBar(props) {
     const [navbarStatus, setNavbarStatus] = useState('');
+    let location = useLocation();
     let content = NavBarContentByLanguage();
+
     function linkGenerator(id, name){
         return (
             <NavLink to={`${process.env.PUBLIC_URL}/${id}`} onClick={() => { props.setShowdropdownElectro(false);  props.setShowdropdownSolar(false); showMobileNavBar();}} >
@@ -45,49 +47,41 @@ function NavBar(props) {
                 document.getElementById("html").style.overflow = "hidden";
             } else if (navbarStatus !== 'flex') {
                 document.getElementById("html").style.overflow = "auto";
-            }
-             
+            }   
         }
         window.addEventListener('resize', setOverflowControll)
-})
-
-    
- 
-
-    let location = useLocation();
+    })
 
     React.useEffect(() => {
         window.scrollTo(0, 0);
     }, [location]);
-
 
     useEffect(()=>{
         const el = document.querySelector(".NavBarWrapper");
         const observer = new IntersectionObserver( 
             ([e]) => e.target.classList.toggle("not-pinned", e.intersectionRatio < 1),
             { threshold: [1] }
-          );
-          
-          observer.observe(el);
-});
+        );
+    
+        observer.observe(el);
+    });
+
     return (        
         <div className='NavBarWrapper'>
-            
             {/* Mobile BAR */}
             <div className='MenuShowHideBtn' > 
-            
-            
                 <span onClick={() => showMobileNavBar()}>{fontAwesome(faBars)}  </span>
                 <HeaderInfoBar /> 
             </div>
 
             {/* mainbar */}
             <div className='NavBar' style={{ display: navbarStatus }}>
-            <div className='mobileHide'><Logo /> </div>
+                <div className='mobileHide'><Logo /> </div>
                       
                 <div className='MenuShowHideBtn' > 
                     <span onClick={() => showMobileNavBar()}>{fontAwesome(faBars)}  </span>
-                 </div>
+                </div>
+
                 <div className='navBarLinksWrapper'>
                     {/* <Logo /> */}
                     {linkGenerator('',  `${content.homeLink}`)}

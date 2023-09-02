@@ -1,6 +1,6 @@
 {
    "homepage": "https://ecowatt.lv",
-  "name": "msgruppa",
+  "name": "ecowatt",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

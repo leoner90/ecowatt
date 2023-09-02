@@ -4,7 +4,6 @@ import Home from '../views/Home.jsx'
 import Contacts from '../views/ContactsSection.jsx'
 import Gallery from '../views/Gallery.jsx'
 
-
 //SOLAR Landing
 import SolarLandingPage from '../views/SolarWorksPages/index.jsx'
 //Solar Content
@@ -16,7 +15,7 @@ import Nodosana from '../views/SolarWorksPages/nodosana.jsx'
 import Sertificati from '../views/SolarWorksPages/sertificati.jsx'
 import PageNotFound from '../views/PageNotFound.jsx'
 
-// ELECTRO
+// ELECTRO Landing
 import ElectroLandingPage from '../views/ElectricalWorksPages/index.jsx'
 //ELECTRO Content
 import ProjectesanaElectro from '../views/ElectricalWorksPages/projectesana.jsx'
@@ -32,14 +31,11 @@ const Router = () => (
         <Route path={`${process.env.PUBLIC_URL}/`} element={<Home />} />
         <Route path={`${process.env.PUBLIC_URL}/*`} element={<PageNotFound />} />
         <Route path={`${process.env.PUBLIC_URL}/contacts`} element={<Contacts />} />
-        {/* <Route path={`${process.env.PUBLIC_URL}/solarPanel`} element={<SolarPanel />} /> */}
         <Route path={`${process.env.PUBLIC_URL}/gallery`} element={<Gallery />} />     
         <Route path={`${process.env.PUBLIC_URL}/solar/*`} element={<SolarLandingPage />} />
         <Route path={`${process.env.PUBLIC_URL}/electro/*`} element={<ElectroLandingPage />} />
     </Routes>
 )
-
-
 
 const RouterElectro = (props) => (
     <Routes basename={`/electro`}>

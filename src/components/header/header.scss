@@ -4,13 +4,14 @@
 .dropDownMenu {
   display: inline-block;
  
- .dropDownItself {
-  transition: 1s;
-  display: inline-block;
+  .dropDownItself {
+    transition: 1s;
+    display: inline-block;
     display: none;
     background-color: $dropDownBgColor ;
     position: absolute;
     text-align: left;
+
     a {
       min-width: 180px;
       word-break: keep-all;
@@ -24,9 +25,6 @@
       }
     }
   }
-
- 
-
 }
 
 .faCaretDown {
@@ -38,7 +36,6 @@
 }
 
 .MainLogo {
-  // animation: 1.85s ease-out 0s 1 slideInFromLeft;
   z-index: 2;
   height: 76px;
   width: 76px;
@@ -59,10 +56,8 @@
   font-size: 0.95vw;
   font-style: italic;
   color: #fff;
-  // font-weight: bold;
   display: flex;
   align-items: center;
-
 }
 
 .navBarLinksWrapper a, 
@@ -88,10 +83,7 @@
   color: #fff !important;
   text-shadow: 2px 2px 3px #004f58;
   font-weight: 900;
-
 }
-
-
 
 .navBarLinksWrapper >a:first-of-type::before {
   content: none;
@@ -136,7 +128,8 @@
 #html {
   overflow: auto;
 }
-  .NavBarWrapper { 
+
+.NavBarWrapper { 
   z-index: 99999 !important;
   transition: 0.35s;
   min-height: 95px;
@@ -146,7 +139,6 @@
   display: flex;
   align-items: center;
   background-color: $NavBarPinnedCollor ;
-  
 }
 
 .caretForMobileMenu {
@@ -160,7 +152,6 @@
 
 .not-pinned {
   min-height: 75px !important;
-  //transition: 0.4s;
   background-color: $NavBarNotPinnedCollor ;
   border-bottom: 1px solid #ccc;
 
@@ -184,11 +175,6 @@
   width: 100%;
 }
 
-
-
-
-
-
 //ANIMATION
 @keyframes slideInFromLeft {
   0% {
@@ -199,9 +185,11 @@
     transform: rotate(-180deg);
     filter: grayscale(100%);
   }
+
   40% {
     filter: grayscale(100%);
   }
+
   100% {
     -webkit-transform: rotate(0);
     -moz-transform: rotate(0);
@@ -216,6 +204,7 @@
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -233,7 +222,7 @@
 
 @include forSmallDesktop {
   .NavBar {
-       padding: 0 $small-display-padding ;
+    padding: 0 $small-display-padding ;
   }
 
   .CompanyName,
@@ -253,13 +242,16 @@
   
   .navBarLinksWrapper  {
     padding-right: 0;
+
     a {
       margin-right: 10px;
     }
   }
+
   .NavBar {
        padding: 0 5%;
   }
+
   .navBarLinksWrapper  a,
   .fakeLink   {
     font-size: 1.2vw;
@@ -294,32 +286,34 @@
     min-height: 100vh
   }
 
-.dropDownItself {
- display: block;
- padding-left: 20px;
- background-color: transparent !important;;
- a {
-   display: block !important;
-   &::before {
-     content: "> ";
-   }  
- }
-}
+  .dropDownItself {
+    display: block;
+    padding-left: 20px;
+    background-color: transparent !important;
 
-.caretForMobileMenu {
- display: inline-block;
- color: #036400;
- padding-right: 10px;
- font-size: 3vw;
-}
+    a {
+      display: block !important;
 
-.CompanyName,
-.navBarLinksWrapper  a,
-.fakeLink  {
- font-size: 2.5vw;
- align-items: center;
- display: flex !important;
-}
+      &::before {
+        content: "> ";
+      }  
+    }
+  }
+
+  .caretForMobileMenu {
+    display: inline-block;
+    color: #036400;
+    padding-right: 10px;
+    font-size: 3vw;
+  }
+
+  .CompanyName,
+  .navBarLinksWrapper  a,
+  .fakeLink  {
+    font-size: 2.5vw;
+    align-items: center;
+    display: flex !important;
+  }
 
   .DesktopLogo {
     display: none;
@@ -330,9 +324,8 @@
   }
   
   .dropDownItself {
- 
     display: block;
-      position: relative !important;
+    position: relative !important;
   }
 
   .MenuShowHideBtn .logoWrapper {
@@ -347,12 +340,8 @@
   .MainLogo {
     height: 35px;
     width: 35px;
-   
   }
  
-
- 
-    
   .NavBar {
     padding: 0 $base-padding-mobile ;
     bottom: 0;
@@ -397,9 +386,6 @@
     padding: 0;
   }
 
-
-
-
   .NavBar > a {
     text-align: left;
     background-color: #7e7e7e;
@@ -407,14 +393,10 @@
     margin-bottom: 5px;
     padding: 10px 15px;
   }
-
-
  
   .NavBarWrapper {
     padding-right: 30px;
     text-align: right;
- 
-  
   }
 
   .contactsBtn {
@@ -423,13 +405,16 @@
 
   .dropDownItself .navBarLinksWrapper{
     padding: 0 !important;
-    a{
+
+    a {
       color: #fff;
     }
+
     a::before {
       content: "-";
     }
   }
+
   .navBarLinksWrapper {
     padding-left: 60px;
     text-align: left;
@@ -450,28 +435,25 @@
   }
 }
 
-
-
 //MOBILE
 @include for-mobile-design{
   .caretForMobileMenu {
     font-size: 4vw;
-   }
+  }
 
-   .navBarLinksWrapper > a, .fakeLink {
-      font-size: 3.5vw !important;
-    }
+  .navBarLinksWrapper > a, .fakeLink {
+    font-size: 3.5vw !important;
+  }
     
-    .navBarLinksWrapper {
-      padding-left: 40px;
-    }
+  .navBarLinksWrapper {
+    padding-left: 40px;
+  }
 
-    .navBarLinksWrapper  {
-      flex: 4 ;
-    }
+  .navBarLinksWrapper  {
+    flex: 4 ;
+  }
 
-    .NavBarWrapper {
- 
-      min-height: 75px ;
-    }
+  .NavBarWrapper {
+    min-height: 75px ;
+  }
 }

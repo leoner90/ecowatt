@@ -7,11 +7,8 @@ function PriceSection(props) {
         return <FontAwesomeIcon className={className} icon={value} />
     }
     
- 
     return (
         <div className='priceSection'>
-            
-           
             <div  className='priceRightSide'>
                 <div  className=  'priceBlock'  >
                     <p className='priceHeader'>{fontAwesome(faArrowTurnRight, 'priceHeaderSvg')}  {props.name} </p>

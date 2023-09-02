@@ -17,11 +17,12 @@
 
 .mobileMenuShow {
   display: none;
+
  .navBarLinksWrapper {
     display: flex !important;
     flex-wrap: wrap;
 
-  a {
+    a {
       margin: 0;
       padding: 5px;
       display: block !important;
@@ -40,19 +41,19 @@
   flex: 1;
   text-align: left;
 
-h1 {
-  font-size: 1.4vw;
-  background: #ebebeb;
-  text-shadow: 0.5px 0.5px 0.5px #434141;
-  padding: 20px;
-  margin: 0;
-  border-radius: 5px;
-  text-align: center;
-  box-shadow: 10px 0px  15px #ccc;
-  border: 2px solid #ccc;
-  font-style: italic;
-  color: #505454;
-}
+  h1 {
+    font-size: 1.4vw;
+    background: #ebebeb;
+    text-shadow: 0.5px 0.5px 0.5px #434141;
+    padding: 20px;
+    margin: 0;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 10px 0px  15px #ccc;
+    border: 2px solid #ccc;
+    font-style: italic;
+    color: #505454;
+  }
 
   .ElectricalWorksTextIself{
     box-shadow: 10px 5px 15px #ccc;
@@ -104,21 +105,20 @@ h1 {
   .worksWeDoContainer {
     visibility: hidden;
 
-      .worksWeDoWrapper {
-        animation: none;
-        background-color: rgb(226 233 255);
-        color: rgb(25, 29, 41);
-        margin-left: 3% ;
-        margin-right: 0 ;
-        width: 29.5%;
+    .worksWeDoWrapper {
+      animation: none;
+      background-color: rgb(226 233 255);
+      color: rgb(25, 29, 41);
+      margin-left: 3% ;
+      margin-right: 0 ;
+      width: 29.5%;
 
-        .worksWeDoLogoWrapper {
-
-          .worksWeDoWrapperLogo {
-              padding: 0;     
-          }
+      .worksWeDoLogoWrapper {
+        .worksWeDoWrapperLogo {
+            padding: 0;     
         }
       }
+    }
   }
 }
 
@@ -131,28 +131,28 @@ h1 {
      
       transform: translateX(100%);
     }
-    100% {
-       
+
+    100% { 
       transform: translateX(0);
     }
   }
 
 
 
-  .ElectricalWorksImgIself {
-    object-fit: contain;
-    max-width: 100%;
-    position: sticky;
-    top: 150px;
-    width: 100%;
-    border-radius: 5px;
-    max-height: 100%;
-  }
+.ElectricalWorksImgIself {
+  object-fit: contain;
+  max-width: 100%;
+  position: sticky;
+  top: 150px;
+  width: 100%;
+  border-radius: 5px;
+  max-height: 100%;
+}
   
 
 
 
- .imgLazyLoaderElectritionMainImg {
+.imgLazyLoaderElectritionMainImg {
   border: 7px solid #9eddff;
   border-top: 7px solid #3498db;
   border-radius: 50%;
@@ -163,21 +163,20 @@ h1 {
   margin: 10px auto;
   flex: none;
   overflow: hidden;
- }
+}
 
 
- .DesctopMenuShow > .navBarLinksWrapper {
+.DesctopMenuShow > .navBarLinksWrapper {
   padding: 2.25% 0;
   box-shadow: 2px 2px 5px;
   border: 1px solid #888;
   border-radius: 5px;
+
   > a {
     text-shadow: 1.2px 1.2px #000;
     font-size: 0.79vw !important;
     margin: 0;
     
-    
-
     &::after {
       color: #fff ;
       content: " |";
@@ -209,22 +208,19 @@ h1 {
 
 .priceSection .priceBlock {
   transform: rotateX(0);
-    top: 0;
-    padding-top: 25px;
-    margin-top: 25px;
-    border-top: 1px solid #ccc;
-    &:hover {
-      background-color: inherit;
-      border-radius: 0;
-      
-    }
+  top: 0;
+  padding-top: 25px;
+  margin-top: 25px;
+  border-top: 1px solid #ccc;
+
+  &:hover {
+    background-color: inherit;
+    border-radius: 0;
+  }
 }
 
 
 @include forSmallDesktop {
-  
-
-
   .ElectricalWorksWrapper {
     padding: 2.5% $small-display-padding 0 $small-display-padding  !important;
   }
@@ -234,15 +230,14 @@ h1 {
     margin: 3% 3% 3% 0;
   }
 
-
   .electritionWorksImg {
     background-position: center center;
     margin: 11% 20px 11% 0;
-}
+  }
 
-.electricPowerWorksHeader {
-  font-size: 1.6vw;
-}
+  .electricPowerWorksHeader {
+    font-size: 1.6vw;
+  }
 }
 
 @include for-tablet-design {
@@ -250,102 +245,99 @@ h1 {
   .mobileMenuShow  .navBarLinksWrapper   a {
       font-size: 1.8vw;
   }
+
   .ElectricalWorksText {
-    h1{ 
+    h1 { 
       font-size: 2vw;
       margin-top: 15px;
     }
   }
 
-.ElectricalWorksImgIself {
-  min-height: 190px;
-  position: static;
-}
-
-.DesctopMenuShow > .navBarLinksWrapper {
-  > a {
-    font-size: 0.79vw !important;
+  .ElectricalWorksImgIself {
+    min-height: 190px;
+    position: static;
   }
-}
-.DesctopMenuShow{
-  display: none;
-}
 
-.mobileMenuWrapper {
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #126068;
-  color: #fff;
-  font-weight: bold;
-  padding: 0px 0 5px 0;
-  border-radius: 5px;
-}
-
-.navBarLinksWrapper {
-  background-color: transparent !important;
-}
-
-.ElectricalWorksContentWrapper {
-  flex-direction: column-reverse;
-}
-
-.ElectricalWorksImg{
-  // height: 230px;
-  background-color: #fff;
-  flex: none;
-}
-
-.ElectricalWorksWrapper {
-  padding: 2.5% $base-padding-tablet 0 $base-padding-tablet  !important;
-}
-
-.electritionWorksImg {
-  min-height: 50vh;
-  margin: 0 ;
-  border-radius: 0;
-}
-
-.electricPowerWorks .worksWeDoContainer .worksWeDoWrapper {
-  width: 28.5%; 
-
-}
-
-.electricPowerWorksHeader {
-  font-size: 1.8vw;
-}
-
-.electricPowerWorks {
-
-  padding: 0 5%;
-}
-
-.ElectricalWorksWrapper .navBarLinksWrapper {
- 
-  text-align: left;
-}
-.ElectricalWorksWrapper .navBarLinksWrapper {
-  background-color: #126068;
-
-  padding-left: 20px;
-  padding-top: 10px;
-  a::before {
-    content: "- " !important;
+  .DesctopMenuShow > .navBarLinksWrapper {
+    > a {
+      font-size: 0.79vw !important;
+    }
   }
-}
 
+  .DesctopMenuShow{
+    display: none;
+  }
+
+  .mobileMenuWrapper {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #126068;
+    color: #fff;
+    font-weight: bold;
+    padding: 0px 0 5px 0;
+    border-radius: 5px;
+  }
+
+  .navBarLinksWrapper {
+    background-color: transparent !important;
+  }
+
+  .ElectricalWorksContentWrapper {
+    flex-direction: column-reverse;
+  }
+
+  .ElectricalWorksImg{
+    // height: 230px;
+    background-color: #fff;
+    flex: none;
+  }
+
+  .ElectricalWorksWrapper {
+    padding: 2.5% $base-padding-tablet 0 $base-padding-tablet  !important;
+  }
+
+  .electritionWorksImg {
+    min-height: 50vh;
+    margin: 0 ;
+    border-radius: 0;
+  }
+
+  .electricPowerWorks .worksWeDoContainer .worksWeDoWrapper {
+    width: 28.5%; 
+  }
+
+  .electricPowerWorksHeader {
+    font-size: 1.8vw;
+  }
+
+  .electricPowerWorks {
+    padding: 0 5%;
+  }
+
+  .ElectricalWorksWrapper .navBarLinksWrapper {
+    text-align: left;
+  }
+
+  .ElectricalWorksWrapper .navBarLinksWrapper {
+    background-color: #126068;
+    padding-left: 20px;
+    padding-top: 10px;
+
+    a::before {
+      content: "- " !important;
+    }
+  }
 }
 
 @include for-mobile-design{
   
-.ElectricalWorksImg {
+  .ElectricalWorksImg {
+    position: static;
+  }
 
-
-position: static;
-
-}
   .ElectricalWorksText {
-    h1{ 
+    h1 { 
       font-size: 3vw;
       margin-top: 15px;
     }
@@ -355,10 +347,6 @@ position: static;
     padding: 2.5% $base-padding-mobile 0 $base-padding-mobile !important;
   }
   
-
-  
-
-
   .electricPowerWorksHeader {
     font-size: 3vw;
     margin: 5% 0;

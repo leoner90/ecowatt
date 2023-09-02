@@ -1,5 +1,4 @@
 import './headerInfoBar.scss'
- 
 import { useDispatch } from 'react-redux';
 import { setLanguage } from '../../store/slices/settings'
 import React, { useEffect } from "react";

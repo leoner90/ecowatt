@@ -5,7 +5,7 @@ import  { useEffect } from "react";
 import textSpliter from "../js/textSplitter.js";
 import PriceSection from "../../components/priceSection/priceSection.jsx";
 
- function ElectricalWorks(props) {
+function ElectricalWorks(props) {
   let content = SolarContentByLanguage();
   let prices = Prices();
 
@@ -13,8 +13,8 @@ import PriceSection from "../../components/priceSection/priceSection.jsx";
     props.setCurentDirName(content.SolarInstalSectionHeader)
   },[props, content.SolarInstalSectionHeader]);
 
-    return (
-      <div className='ElectricalWorksContentWrapper'> 
+  return (
+    <div className='ElectricalWorksContentWrapper'> 
       <div className='ElectricalWorksText'>
         <h1> {<FontAwesomeIcon className='solarHeaderFontAwesome' icon={faSolarPanel} />} {content.SolarInstalSectionHeader}</h1>
         <div className="ElectricalWorksTextIself"> { 
@@ -22,13 +22,12 @@ import PriceSection from "../../components/priceSection/priceSection.jsx";
           <PriceSection price ={prices.ElectroBuildPrice} name={content.SolarInstalSectionHeader} />
         </div>
       </div>
-       
-            <div className='ElectricalWorksImg' >
-              <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/montaza.jpg"   />
-            </div>
-          </div> 
-      
-    )
+
+      <div className='ElectricalWorksImg' >
+        <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/montaza.jpg" />
+      </div>
+    </div> 
+  )
 }
 
 export default ElectricalWorks;

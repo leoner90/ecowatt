@@ -6,7 +6,7 @@ import  { useEffect } from "react";
 import textSpliter from "../js/textSplitter.js";
 import PriceSection from "../../components/priceSection/priceSection.jsx";
 
- function ElectricalWorks(props) {
+function ElectricalWorks(props) {
   let content = ElectroContentByLanguage();
   let prices = Prices();
 
@@ -14,23 +14,21 @@ import PriceSection from "../../components/priceSection/priceSection.jsx";
     props.setCurentDirName(content.ElectroDeploySectionHeader)
   },[props, content.ElectroDeploySectionHeader]);
   
-    return (
-      
-      <div className='ElectricalWorksContentWrapper'> 
-        <div className='ElectricalWorksText'>
-          <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectroDeploySectionHeader}</h1>
-          <div className="ElectricalWorksTextIself"> 
-            { textSpliter(content.ElectroDeploySectionBody,  '\n')}
-            <PriceSection price ={prices.ElectroObjPassPrice} name={content.ElectroDeploySectionHeader} />
-          </div>
+  return (
+    <div className='ElectricalWorksContentWrapper'> 
+      <div className='ElectricalWorksText'>
+        <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectroDeploySectionHeader}</h1>
+        <div className="ElectricalWorksTextIself"> 
+          { textSpliter(content.ElectroDeploySectionBody,  '\n')}
+          <PriceSection price ={prices.ElectroObjPassPrice} name={content.ElectroDeploySectionHeader} />
         </div>
- 
-        <div className='ElectricalWorksImg' >
-              <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/nodosanaElectro.jpg"   />
-            </div>
-      </div> 
-       
-    )
+      </div>
+
+      <div className='ElectricalWorksImg' >
+        <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/nodosanaElectro.jpg"   />
+      </div>
+    </div> 
+  )
 }
 
 export default ElectricalWorks;

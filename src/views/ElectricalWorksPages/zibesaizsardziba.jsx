@@ -5,7 +5,7 @@ import  { useEffect } from "react";
 import textSpliter from "../js/textSplitter.js";
 import PriceSection from "../../components/priceSection/priceSection.jsx";
 
- function ElectricalWorks(props) {
+function ElectricalWorks(props) {
   let content = ElectroContentByLanguage();
   let prices = Prices();
 
@@ -13,22 +13,21 @@ import PriceSection from "../../components/priceSection/priceSection.jsx";
     props.setCurentDirName(content.ElectrolightningSectionHeader)
   },[props,content.ElectrolightningSectionHeader]);
   
-    return (
-      <div className='ElectricalWorksContentWrapper'> 
-        <div className='ElectricalWorksText'>
-          <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectrolightningSectionHeader}</h1>
-          <div className="ElectricalWorksTextIself">
-             { textSpliter(content.ElectrolightningSectionBody,  '\n')}
-             <PriceSection price ={prices.lightningProtectionPrice} name={content.ElectrolightningSectionHeader} />
-            </div>
+  return (
+    <div className='ElectricalWorksContentWrapper'> 
+      <div className='ElectricalWorksText'>
+        <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectrolightningSectionHeader}</h1>
+        <div className="ElectricalWorksTextIself">
+          { textSpliter(content.ElectrolightningSectionBody,  '\n')}
+          <PriceSection price ={prices.lightningProtectionPrice} name={content.ElectrolightningSectionHeader} />
         </div>
-  
-        <div className='ElectricalWorksImg' >
-          <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/zibesaizsardziba.jpg"   />
-        </div>
-      </div> 
-     
-    )
+      </div>
+
+      <div className='ElectricalWorksImg' >
+        <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/zibesaizsardziba.jpg"   />
+      </div>
+    </div> 
+  )
 }
 
 export default ElectricalWorks;

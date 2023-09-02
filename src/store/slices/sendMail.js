@@ -11,6 +11,7 @@ const initialState = {
 export const ShopSlice = createSlice({
   name: 'Mail',
   initialState,
+  
   //local manipulation
   reducers: {
     setEmailStatus: (state, action) => {
@@ -18,17 +19,15 @@ export const ShopSlice = createSlice({
       state.errors = action.payload;
     },
   },
+
   //to call after mutation e.g. DB call
   extraReducers: builder => {
     builder.addMatcher(api.endpoints.sendEmail.matchFulfilled, (state, action) => {
       state.errors = action.payload['errors'];
-      state.success =  action.payload['success'];
-      
+      state.success =  action.payload['success']; 
     })   
   },
 })
-
-//export
 
 export const {setEmailStatus } = ShopSlice.actions
 export default ShopSlice.reducer

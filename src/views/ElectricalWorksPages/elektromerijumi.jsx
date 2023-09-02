@@ -6,30 +6,29 @@ import  { useEffect } from "react";
 import textSpliter from "../js/textSplitter.js";
 import PriceSection from "../../components/priceSection/priceSection.jsx";
 
- function ElectricalWorks(props) {
-    let content = ElectroContentByLanguage();
-    let prices = Prices();
+function ElectricalWorks(props) {
+  let content = ElectroContentByLanguage();
+  let prices = Prices();
 
-    useEffect(() => {
-      props.setCurentDirName(content.ElectroMeasurementSectionHeader)
-    },[props, content.ElectroMeasurementSectionHeader]);
+  useEffect(() => {
+    props.setCurentDirName(content.ElectroMeasurementSectionHeader)
+  },[props, content.ElectroMeasurementSectionHeader]);
 
-    return (
-      <div className='ElectricalWorksContentWrapper'> 
-        <div className='ElectricalWorksText'>
-          <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectroMeasurementSectionHeader}</h1>
-          <div className="ElectricalWorksTextIself"> { 
-            textSpliter(content.ElectroMeasurementSectionBody,  '\n')}
-            <PriceSection price ={prices.ElectroMeasurementsPrice} name={content.ElectroMeasurementSectionHeader} />
-          </div>
+  return (
+    <div className='ElectricalWorksContentWrapper'> 
+      <div className='ElectricalWorksText'>
+        <h1> {<FontAwesomeIcon className='electroHeaderFontAwesome' icon={faLightbulb} />} {content.ElectroMeasurementSectionHeader}</h1>
+        <div className="ElectricalWorksTextIself"> { 
+          textSpliter(content.ElectroMeasurementSectionBody,  '\n')}
+          <PriceSection price ={prices.ElectroMeasurementsPrice} name={content.ElectroMeasurementSectionHeader} />
         </div>
-    
-        <div className='ElectricalWorksImg' >
-          <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/elektromerijumi.jpg"   />
-        </div>
-      </div> 
-      
-    )
+      </div>
+  
+      <div className='ElectricalWorksImg' >
+        <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/elektromerijumi.jpg"   />
+      </div>
+    </div> 
+  )
 }
 
 export default ElectricalWorks;

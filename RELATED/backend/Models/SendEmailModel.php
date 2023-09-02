@@ -40,7 +40,7 @@ class SendEmailModel
         }
 
         $url = 'https://www.google.com/recaptcha/api/siteverify';
-        $data = ['secret'   => 'SEKRET KEY',
+        $data = ['secret'   => 'ENTER SEKRET KEY',
                     'response' =>  $token];
                     
         $options = [
@@ -73,7 +73,7 @@ class SendEmailModel
            $mail->Host       = ' smtp.gmail.com ';   
            $mail->SMTPAuth   = true; 
            $mail->Username   = 'ecowatt.riga@gmail.com';
-           $mail->Password   = 'SECRET KEY';
+           $mail->Password   = 'ENTER GMAIL SECRET KEY';
            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
            $mail->Port       = 465; 
            $mail->SMTPSecure = "ssl";

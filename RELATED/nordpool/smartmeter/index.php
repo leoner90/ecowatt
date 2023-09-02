@@ -50,6 +50,18 @@ if(date("H") == 23 && date("i") == 59 )
                 if($key == 'totalActiveConsumed3') {
                     $filedata['totalActiveConsumed3'] =  number_format($value, 3, '.', '');
                 }
+
+                if($key == 'hour') {
+                    $filedata['hour'] =  number_format($value, 3, '.', '');
+                }
+
+                if($key == 'minutes') {
+                    $filedata['minutes'] =  number_format($value, 3, '.', '');
+                }
+
+                if($key == 'second') {
+                    $filedata['secondsss'] =  number_format($value, 3, '.', '');
+                }
           
             }
           }

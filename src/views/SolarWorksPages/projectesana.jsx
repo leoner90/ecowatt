@@ -6,7 +6,7 @@ import textSpliter from "../js/textSplitter.js";
 import PriceSection from "../../components/priceSection/priceSection.jsx";
  
 
- function ElectricalWorks(props) {
+function ElectricalWorks(props) {
   let content = SolarContentByLanguage();
   let prices = Prices();
 
@@ -14,12 +14,12 @@ import PriceSection from "../../components/priceSection/priceSection.jsx";
     props.setCurentDirName(content.SolarProjectSectionHeader)
   },[props, content.SolarProjectSectionHeader]);
   
-    return (
-      <div className='ElectricalWorksContentWrapper'> 
+  return (
+    <div className='ElectricalWorksContentWrapper'> 
       <div className='ElectricalWorksText'>
         <h1>{<FontAwesomeIcon className='solarHeaderFontAwesome' icon={faSolarPanel} />}  {content.SolarProjectSectionHeader}</h1>
         <div className="ElectricalWorksTextIself"> 
-          { textSpliter(content.SolarProjectSectionBody,  '\n')}
+          {textSpliter(content.SolarProjectSectionBody,  '\n')}
           <PriceSection price ={prices.SolarProjectPrice} name={content.SolarProjectSectionHeader} />
         </div>
       </div>
@@ -27,8 +27,7 @@ import PriceSection from "../../components/priceSection/priceSection.jsx";
         <img alt="" className="ElectricalWorksImgIself" src="../img/worksWeDo/solarProjectesana.jpg"   />
       </div>
     </div> 
-     
-    )
+  )
 }
 
 export default ElectricalWorks;

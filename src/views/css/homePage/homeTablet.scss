@@ -1,7 +1,6 @@
 
 @include for-tablet-design {
   
-
     .clientCountWrapper {
         flex-direction: column;
     }
@@ -44,6 +43,7 @@
         font-size: 1.5vw !important;
  
     }
+
     .clientCountRightSideHeader,
     .WorkCountNumber{
         font-size: 2.5vw;
@@ -56,6 +56,4 @@
     .subSlogan {
         font-size: 1.7vw;
     }
-
-   
 }

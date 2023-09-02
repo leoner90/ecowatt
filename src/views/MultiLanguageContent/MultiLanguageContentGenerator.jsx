@@ -1,6 +1,4 @@
 import { useSelector } from 'react-redux';
-import { faSolarPanel  } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 function NavBarContentByLanguage() {
     let curentLanguage = useSelector(state => state.settings.currentLanguage);
@@ -167,8 +165,7 @@ function ElectroContentByLanguage() {
     
                 Перед тем как приступать к выполнению электромонтажных работ должно быть, как минимум, представление о всех потребителях в помещениях, особенно силовых мощностью от 1 кВт и выше. 
 
-                На такие потребители как стиральная машинка, посудомойка, бойлер (водонагреватель), 
-                варочная поверхность, в обязательном порядке требуется прокладка отдельных кабельных линий, сечение которых соответствует мощности потребителя. 
+                На такие потребители как стиральная машинка, посудомойка, бойлер (водонагреватель),  варочная поверхность, в обязательном порядке требуется прокладка отдельных кабельных линий, сечение которых соответствует мощности потребителя. 
      
                 /l Проектирование щитов
     
@@ -183,8 +180,7 @@ function ElectroContentByLanguage() {
                 Электромонтажные работы различной сложности и вида, любой электромонтаж от установки розетки и выключателя до полной замены электропроводки в квартире 
                 или загородном доме под ключ.   
                 
-                Команда профессионалов, все мастера имеют соответствующую квалификацию и многолетний опыт в сфере электромонтажа, 
-                а в нашем арсенале все необходимое оборудование и проверенные материалы
+                Команда профессионалов, все мастера имеют соответствующую квалификацию и многолетний опыт в сфере электромонтажа, а в нашем арсенале все необходимое оборудование и проверенные материалы
                 
                 /l Установки розеток
 
@@ -257,11 +253,11 @@ function ElectroContentByLanguage() {
             ElectroVideoSectionHeader = "ВИДЕОНАБЛЮДЕНИЕ";
             ElectroVideoSectionBody = 
             `
-            Системы видеонаблюдения позволяют в реальном времени предотвращать угрозу вашему бизнесу,
-            а также удаленно мониторить происходящее на объекте. Наши специалисты подберут необходимое оборудование по вашим потребностям и осуществят его монтаж.
+            Системы видеонаблюдения позволяют в реальном времени предотвращать угрозу вашему бизнесу, а также удаленно мониторить происходящее на объекте. 
+            Наши специалисты подберут необходимое оборудование по вашим потребностям и осуществят его монтаж.
             
-            Основная задача видеонаблюдения в магазине — предотвратить хищение товара и денежных средств. Система видеонаблюдения должна охватывать торговый зал,
-            складские помещения и кассовую зону. При установке видеокамер желательно избежать «мёртвых» зон.
+            Основная задача видеонаблюдения в магазине — предотвратить хищение товара и денежных средств. 
+            Система видеонаблюдения должна охватывать торговый зал,складские помещения и кассовую зону. При установке видеокамер желательно избежать «мёртвых» зон.
             Видеорегистратор устанавливается в помещении с ограниченным доступом. 
 
             /l Установка внутренней (купольной) камеры
@@ -306,10 +302,7 @@ function ElectroContentByLanguage() {
 
             Сценарии настраиваются под вас и вашу семью, а при желании, возможно изменить их в любое удобное время.
             
-            Выходя из дома, вам не придется вспоминать
-            выключили ли свет или не забыли ли отключить от электропитания какой-то бытовой прибор 
-
-            вы сможете управлять всеми вашими устройствами со смартфона, даже находясь в другой стране.
+            Выходя из дома, вам не придется вспоминать выключили ли свет или не забыли ли отключить от электропитания какой-то бытовой прибор , вы сможете управлять всеми вашими устройствами со смартфона, даже находясь в другой стране.
             `;
  
             ElectrolightningSectionHeader = "МОЛНИЕЗАЩИТА";
@@ -337,19 +330,18 @@ function ElectroContentByLanguage() {
         default:
             ElectroProjectSectionHeader = "ELEKTRO-PROJEKTĒŠANA";
             ElectroProjectSectionBody = 
-            `${<FontAwesomeIcon className='solarHeaderFontAwesome' icon={faSolarPanel} />}
+            `
             No labi izstrādāta iekšējā barošanas avota ir atkarīgs ne tikai komforts, bet arī drošība mājās, birojā vai uzņēmumā.
 
-             Paneļu projektēšana un montāža ir viena no galvenajām pareizās pieejas sastāvdaļām dzīvokļa vai mājas renovācijā.
+             Sadales skapja projektēšana un montāža ir viena no galvenajām sastāvdaļām pareizās dzīvokļa vai mājas renovācijā.
 
              Pirms elektroinstalācijas darbu uzsākšanas ir jābūt vismaz priekšstatam par visiem telpās esošajiem patērētājiem,
              īpaši jaudas no 1 kW un vairāk.
             
-             Tādiem patērētājiem kā veļas mašīna, trauku mazgājamā mašīna, boileris (ūdens sildītājs),
-             plīts virsma, obligāti jāizvelk atsevišķas kabeļu līnijas, kuru šķērsgriezums atbilst patērētāja jaudai.
+             Tādiem patērētājiem kā veļas mašīna, trauku mazgājamā mašīna, boileris (ūdens sildītājs), elektriskā plīts , obligāti jāizvelk atsevišķas kabeļu līnijas, kuru šķērsgriezums atbilst patērētāja jaudai.
  
             
-             /l Vairoga dizains
+             /l Sadales skapja projektēšana
 
              /l Elektrisko paneļu montāža
 
@@ -359,17 +351,16 @@ function ElectroContentByLanguage() {
             ElectroInstalSectionHeader = "ELEKTROINSTALĀCIJA";
             ElectroInstalSectionBody = 
             `
-            Dažādas sarežģītības un veida elektrodarbi, jebkura elektroinstalācija no kontaktligzdas un slēdža uzstādīšanas līdz pilnīgai elektroinstalācijas nomaiņai dzīvoklī
-            vai pabeigti lauku māja.
+            Dažādas sarežģītības un veida elektrodarbi, jebkura elektroinstalācija no kontaktligzdas un slēdža uzstādīšanas līdz pilnīgai elektroinstalācijas nomaiņai dzīvoklī vai mājā.
            
-            Profesionāļu komanda, visiem meistariem ir atbilstoša kvalifikācija un ilggadēja pieredze elektromontāžas jomā,
+            Profesionāļa komanda, visiem meistariem ir atbilstoša kvalifikācija un ilggadēja pieredze elektromontāžas jomā,
             un mūsu arsenālā viss nepieciešamais aprīkojums un pārbaudīti materiāli
            
             /l  Kontaktligzdas iestatījumi
 
             /l Pārslēgt iestatījumus
 
-            /l  Sadales (sadales) kārbas montāža
+            /l  Sadales kārbas montāža
 
             /l Elektroinstalācija
            
@@ -401,7 +392,7 @@ function ElectroContentByLanguage() {
 
              /l Vadi un kabeļu līnijas.
 
-             /l  Lai atklātu bojājumus un novērstu negadījumus, ir nepieciešamas regulāras pārbaudes un pārbaudes.
+             /l  Lai atklātu bojājumus un novērstu negadījumus, ir nepieciešamas regulāras pārbaudes.
 
              /l Sniedzam pakalpojumus izolācijas pretestības pārbaudei un mērīšanai.
             `;
@@ -419,15 +410,15 @@ function ElectroContentByLanguage() {
             Aktu, kas apliecina objekta parametru atbilstību, tai skaitā efektivitāti un prasības objekta aprīkošanai ar enerģijas uzskaites ierīcēm;
             dokumenti, kas apliecina objekta atbilstību saņemtajiem tehniskajiem nosacījumiem (ja tādi ir);
            
-            Objekta izvietojums un tīklu izvietojums zemesgabala robežās;
+            /l Objekta izvietojums un tīklu izvietojums zemesgabala robežās
            
-            būvuzraudzības valsts institūcijas slēdziens;
+            /l Būvuzraudzības valsts institūcijas slēdziens;
            
-            tehniskais plāns.
+            /l tehniskais plāns.
            
-            Lai veiktu šādu darbu, nepieciešama reālu profesionāļu ar augstu kvalifikāciju palīdzība.
+            Lai veiktu šādu darbu, nepieciešami profesionāļi ar augstu kvalifikāciju.
 
-            Uzticot mūsu uzņēmumam būvlaukuma nodošanu ekspluatācijā, jūs varat būt pārliecināti, ka šī procedūra tiks pabeigta ātri un tai būs īpaši pozitīvs rezultāts.
+            Uzticot mūsu uzņēmumam būvlaukuma nodošanu ekspluatācijā, jūs varat būt pārliecināti, ka šī procedūra tiks pabeigta ātri un tai būs  pozitīvs rezultāts.
             `;
            
             ElectroVideoSectionHeader = "VIDEONOVĒROŠANA";
@@ -437,7 +428,7 @@ function ElectroContentByLanguage() {
             kā arī attālināti uzraudzīt objektā notiekošo. Mūsu speciālisti izvēlēsies nepieciešamo aprīkojumu atbilstoši Jūsu vajadzībām un veiks tā uzstādīšanu.
 
              Videonovērošanas galvenais uzdevums veikalā ir preču un naudas zādzības novēršana. Videonovērošanas sistēmai jāaptver tirdzniecības telpa,
-             noliktavas un kases aparāti. Uzstādot videokameras, vēlams izvairīties no "mirušajām" zonām.
+             noliktavas un kases aparāti. Uzstādot videokameras, vēlams izvairīties no "slēptām" zonām.
              Videoreģistrators ir uzstādīts telpā ar ierobežotu piekļuvi.
 
              /l Iekštelpu (kupola) kameras uzstādīšana
@@ -480,12 +471,9 @@ function ElectroContentByLanguage() {
 
             /l  CCTV.
 
-            Scenāriji tiek pielāgoti jums un jūsu ģimenei, un, ja vēlaties, varat tos mainīt jebkurā izdevīgā laikā.
+            Scenāriji tiek pielāgoti jums un jūsu ģimenei, un, ja vēlaties, varat tos mainīt jebkurā  laikā.
            
-            Izejot no mājas, jums nav jāatceras
-            vai tika izslēgta gaisma, vai aizmirsuši atvienot no strāvas padeves kādu sadzīves tehniku
-
-            jūs varēsiet vadīt visas savas ierīces no viedtālruņa, pat ja atrodaties citā valstī.
+            Izejot no mājas, jums nav jāatceras vai tika izslēgta gaisma, vai aizmirsuši atvienot no strāvas padeves kādu sadzīves tehniku jūs varēsiet vadīt visas savas ierīces no viedtālruņa, pat ja atrodaties citā valstī.
             `;
            
             ElectrolightningSectionHeader = "ZIBENSAIZSARDZĪBA";
@@ -496,17 +484,13 @@ function ElectroContentByLanguage() {
             kas notiek tikai zibens spēriena brīdī.
             
             Visbiežāk izmantotās pasīvās zibensaizsardzības sistēmas (PMZ).
-            Galvenās pasīvās zibensaizsardzības atšķirības (to sauc arī par tradicionālo vai Faraday sietu),
-            ar to, ka tas aizsargā tikai vietu, kur ir uzstādīts zibensnovedējs vai zibensnovedējs ar nelielu pārklājuma rādiusu, kas ir pietiekams tikai ēkas (objekta) aizsardzībai.
+            Galvenās pasīvās zibensaizsardzības atšķirības (to sauc arī par tradicionālo vai Faraday sietu), ar to, ka tas aizsargā tikai vietu, kur ir uzstādīts zibensnovedējs vai zibensnovedējs ar nelielu pārklājuma rādiusu, kas ir pietiekams tikai ēkas (objekta) aizsardzībai.
             
-            Iekšējā zibensaizsardzības vai pārsprieguma aizsardzības ierīce elektrotīklā,
-            ko izraisa zibens spēriens esošajā zibens aizsardzībā vai objekta tuvumā.
-            Nogriež un noved pie zemes strāvas impulsiem, kas pēc elektriskajām īpašībām ir vienādi ar zibens spēriena sekām
-            kad tas izplatās virs zemes vai citām konstrukcijām līdz pilnīgas "novājināšanās" brīdim.
+            Iekšējā zibensaizsardzības vai pārsprieguma aizsardzības ierīce elektrotīklā, ko izraisa zibens spēriens esošajā zibens aizsardzībā vai objekta tuvumā.
+            Nogriež un noved pie zemes strāvas impulsiem, kas pēc elektriskajām īpašībām ir vienādi ar zibens spēriena sekām kad tas izplatās virs zemes vai citām konstrukcijām līdz pilnīgas "novājināšanās" brīdim.
             
-            Elektrības vadu aizsargzemējums tiek veikts, lai pasargātu cilvēku no nejaušiem elektriskās strāvas triecieniem,
-            kā arī elektroierīču stabilai darbībai. Tas tiek normalizēts saskaņā ar PUE līdz 4 omiem, kā arī: gāzes katlam līdz 10 om,
-            medicīnas iekārtām līdz 2 Om, apakšstacijai līdz 0,5 Om.
+            Elektrības vadu aizsargzemējums tiek veikts, lai pasargātu cilvēku no nejaušiem elektriskās strāvas triecieniem, kā arī elektroierīču stabilai darbībai. 
+            Tas tiek normalizēts saskaņā ar PUE līdz 4 omiem, kā arī: gāzes katlam līdz 10 om, medicīnas iekārtām līdz 2 Om, apakšstacijai līdz 0,5 Om.
             `;
            
             break;
@@ -531,31 +515,33 @@ function SolarContentByLanguage() {
                 Индивидуальный подход и гибкая ценовая политика, включающая в себя большой практический опыт и наличие нескольких профессиональных монтажных бригад, 
                 позволяют сделать наиболее выгодное предложение по осуществлению монтажа солнечных электростанций.
 
-                Все работы, включающие в себя монтаж солнечной электростанции, а именно: подготовку и сборку оборудования, 
-                проектирование электросети, запуск и отладку всех систем солнечной электростанции - рассчитываются сугубо индивидуально, 
-                каждый проект уникален, как и наш подход к работе!
+                Все работы, включающие в себя монтаж солнечной электростанции, а именно: 
+                /l Подготовку и сборку оборудования, 
+                /l Проектирование электросети, 
+                /l Запуск и отладку всех систем солнечной электростанции - рассчитываются сугубо индивидуально, 
+                /l Уаждый проект уникален, как и наш подход к работе!
 
                 Преимущества:
-                Снижение затрат на электроэнергию.
-                Большая независимость от поставщиков электроэнергии.
-                Экологически чистая инвестиция.
+                /l Снижение затрат на электроэнергию.
+                /l Большая независимость от поставщиков электроэнергии.
+                /l Экологически чистая инвестиция.
 
 
                 Основные компоненты
 
-                /l 1. Солнечная панель
-                /l 2. Инвертор
-                /l 3. Центральная сеть
+                /l  Солнечная панель
+                /l  Инвертор
+                /l  Центральная сеть
 
 
                 Вспомогательные компоненты
 
-                /l  1. Распределительные коробки постоянного тока
-                /l  2. Шины переменного тока (переключатели)
-                /l 3. Пульт управления
-                /l 4. Кабели
-                /l  5. Монтажные конструкции
-                /l 6. Заземление и освещение
+                /l  Распределительные коробки постоянного тока
+                /l  Шины переменного тока (переключатели)
+                /l  Пульт управления
+                /l  Кабели
+                /l  Монтажные конструкции
+                /l  Заземление и освещение
 
            
 
@@ -566,15 +552,15 @@ function SolarContentByLanguage() {
             SolarInstalSectionBody = 
                 `
                 
-                /l 1. Определить примерный объем электроэнергии, который потребуется для поддержания нормальной работы системы. Это поможет понять, какие солнечные панели потребуется для построения системы.
+                /l  Определить примерный объем электроэнергии, который потребуется для поддержания нормальной работы системы. Это поможет понять, какие солнечные панели потребуется для построения системы.
 
-                /l 2. Выбор солнечные панелей, которые обеспечат достаточное количество электроэнергии для поддержания работы системы.
+                /l  Выбор солнечные панелей, которые обеспечат достаточное количество электроэнергии для поддержания работы системы.
 
-                /l 3. План постановки солнечных панелей: Где и как будут расположены солнечные панели, ориентация, угол наклона и прочие факторы.
+                /l  План постановки солнечных панелей: Где и как будут расположены солнечные панели, ориентация, угол наклона и прочие факторы.
                     
-                /l 4. Установка солнечных панелей    
+                /l  Установка солнечных панелей    
 
-                /l 5. Проверка системы: что бы  убедиться в том, что она работает должным образом.
+                /l  Проверка системы: что бы  убедиться в том, что она работает должным образом.
 
 
                 ШАГИ:
@@ -588,7 +574,7 @@ function SolarContentByLanguage() {
 
                 /l Монтаж и настройка солнечных панелей
 
-                /l  Инструктаж клиента по эксплуатации и основам эксплуатации солнечных панелей
+                /l  Инструктаж клиента по основам эксплуатации солнечных панелей
                 `;
 
             SolarInvectorInstallSectionHeader = "НАСТРОЙКА ИНВЕРТОРА";
@@ -599,7 +585,6 @@ function SolarContentByLanguage() {
             
             Поскольку энергия, производимая солнечными панелями, является постоянным током, нам необходимо каким-то образом преобразовать ее в потребляемый переменный ток (AC) для бытового или коммерческого использования.
 
-            Солнечный инвертор
             Для этой операции используются инверторы. Энергия постоянного тока, генерируемая солнечными панелями,
             поступает в инверторы и становится легко используемой переменным током. Тело не может существовать без мозга. 
 
@@ -641,7 +626,7 @@ function SolarContentByLanguage() {
 
             /l Получение разрешения на солнечные станции свыше 11.1 кв .
 
-            /l Подача заявки в latvenergo .
+            /l Подача заявки в "Sadales tīkls" .
 
             /l Настройка инвертора согласно латвийскому законодательству.
 
@@ -671,12 +656,14 @@ function SolarContentByLanguage() {
             SolarProjectSectionHeader = "SAULES PANEĻU PROJEKTĒŠANA";
             SolarProjectSectionBody = 
                 `
-                Individuāla pieeja un elastīga cenu politika, kas ietver plašu praktisko pieredzi un vairāku profesionālu montāžas komandu klātbūtni,
-                ļauj izteikt izdevīgāko piedāvājumu saules elektrostaciju uzstādīšanai.
+                Individuāla pieeja un elastīga cenu politika, kas ietver plašu praktisko pieredzi un vairāku profesionālu montāžas komandu klātbūtni, ļauj izteikt izdevīgāko piedāvājumu saules elektrostaciju uzstādīšanai.
 
-                Visi darbi, ieskaitot saules elektrostacijas uzstādīšanu, proti: iekārtu sagatavošana un montāža,
-                elektrotīkla projektēšana, visu saules elektrostacijas sistēmu palaišana un atkļūdošana - tās aprēķina tikai individuāli,
-                Katrs projekts ir unikāls, tāpat kā mūsu pieeja darbam!
+                Visi darbi, ieskaita saules elektrostancijas uzstādīšanu, precīzāk :
+
+                /l Iekārtu sagatavošana un montāža,
+                /l Elektrotīkla projektēšana
+                /l Visu saules elektrostacijas sistēmu palaišana un atkļūdošana - tās aprēķina tikai individuāli,
+                /l Katrs projekts ir unikāls, tāpat kā mūsu pieeja darbam!
 
                 Priekšrocības:
                 /l  Enerģijas izmaksu samazināšana.
@@ -686,47 +673,48 @@ function SolarContentByLanguage() {
 
                 Galvenās sastāvdaļas
 
-                /l 1. Saules panelis
-                /l 2. Invertors
-                /l 3. Centrālais tīkls
+                /l  Saules panelis
+                /l  Invertors
+                /l  Centrālais tīkls
 
 
                 Palīgkomponenti
 
-                /l 1. Līdzstrāvas sadales kārbas
-                /l 2. Maiņstrāvas kopnes (slēdži)
-                /l 3. Vadības panelis
-                /l 4. Kabeļi
-                /l 5. Montāžas konstrukcijas
-                /l 6. Zemējums un apgaismojums 
+                /l  Līdzstrāvas sadales kārbas
+                /l  Maiņstrāvas kopnes (slēdži)
+                /l  Vadības panelis
+                /l  Kabeļi
+                /l  Montāžas konstrukcijas
+                /l  Zemējums un apgaismojums 
                 `;
 
             SolarInstalSectionHeader = "MONTAŽA";
             SolarInstalSectionBody = 
                 `
-                /l 1. Nosakiet aptuveno elektroenerģijas daudzumu, kas būs nepieciešams, lai uzturētu normālu sistēmas darbību. Tas palīdzēs saprast, kādi saules paneļi būs nepieciešami, lai izveidotu sistēmu.
+                /l  Nosakiet aptuveno elektroenerģijas daudzumu, kas būs nepieciešams, lai uzturētu normālu sistēmas darbību. Tas palīdzēs saprast, kādi saules paneļi būs nepieciešami, lai izveidotu sistēmu.
 
-                /l 2. Saules paneļu izvēle, kas nodrošinās pietiekami daudz elektrības, lai sistēma darbotos.
+                /l  Saules paneļu izvēle, kas nodrošinās pietiekami daudz elektrības, lai sistēma darbotos.
 
-                /l 3. Saules paneļu uzstādīšanas plāns: Kur un kā tiks izvietoti saules paneļi, orientācija, slīpuma leņķis un citi faktori.
+                /l  Saules paneļu uzstādīšanas plāns: Kur un kā tiks izvietoti saules paneļi, orientācija, slīpuma leņķis un citi faktori.
                    
-                /l 4. Saules paneļu uzstādīšana
+                /l  Saules paneļu uzstādīšana
 
-                /l 5. Sistēmas pārbaude: lai pārliecinātos, ka tā darbojas pareizi.
+                /l  Sistēmas pārbaude: lai pārliecinātos, ka tā darbojas pareizi.
 
 
                 DARBĪBAS:
-                Konsultācija
+
+                /l Konsultācija
 
                 /l  Patēriņa definīcija
 
-                /l Piedāvājiet risinājumus saules paneļiem
+                /l Piedāvājam risinājumus saules paneļu uzstādīšanai
 
                 /l Saskaņošana ar klientu
 
                 /l Saules paneļu uzstādīšana un konfigurēšana
 
-                /l Klienta instruktāža par saules paneļu darbību un pamata darbību
+                /l Klienta instruktāža par saules paneļu darbību.
                 `;
 
             SolarInvectorInstallSectionHeader = "INVERTORA IESTATĪŠANA";
@@ -736,9 +724,7 @@ function SolarContentByLanguage() {
                 
                 Tā kā saules paneļu saražotā enerģija ir līdzstrāva, mums tā kaut kādā veidā jāpārvērš patērētajā maiņstrāvā (AC) dzīvojamai vai komerciālai lietošanai.
 
-                saules invertors
-                Šai darbībai tiek izmantoti invertori. Līdzstrāvas jauda, ​​ko ģenerē saules paneļi
-                iekļūst invertoros un kļūst viegli lietojams ar maiņstrāvu. Ķermenis nevar pastāvēt bez smadzenēm.
+                Šai darbībai tiek izmantoti saules invertori. Līdzstrāvas jauda, ​​ko ģenerē saules paneļi iekļūst invertorā un kļūst par viegli lietojamu maiņstrāvu.  
 
                 Bez invertora jūs nevarēsiet izveidot pilnvērtīgu saules elektrostaciju.
 
@@ -758,9 +744,9 @@ function SolarContentByLanguage() {
             
             /l Elektroinstalācijas stāvokļa pārbaude.
             
-            /l Pārbaudiet saules paneļu bojājumus vai sekundāro nodilumu.
+            /l Pārbaudiet saules paneļu bojājumus.
             
-            /l Strāvas un sprieguma parametru pārbaude, pievienojot tīklam.
+            /l Strāvas un sprieguma parametru pārbaude.
             
             /l  Sistēmas hermētiskuma pārbaude.
             
@@ -776,11 +762,11 @@ function SolarContentByLanguage() {
 
             /l  Projekta sagatavošana
 
-            /l Atļaujas saņemšana makroģeneratoriem līdz 11,1 kv.
+            /l Atļaujas saņemšana mikroģeneratoriem līdz 11,1 kv.
 
             /l Atļaujas saņemšana saules stacijām virs 11,1 kv.
 
-            /l Pieteikuma iesniegšana Latvenergo.
+            /l Pieteikuma iesniegšana "Sadales tīkls".
 
             /l  Invertora iestatīšana atbilstoši Latvijas likumdošanai.
 
@@ -790,9 +776,9 @@ function SolarContentByLanguage() {
             SolarSerteficatsSectionHeader = "SERTIFICĒTI SPECIĀLISTI";
             SolarSerteficatsSectionBody = 
             `
-            /l  Mūsu sertificētie speciālisti labi pārzina visas prasības un smalkumus saules paneļu uzstādīšanā.
+            /l  Mūsu sertificētie speciālisti labi pārzina visas prasības saules paneļu uzstādīšanā.
 
-            /l Viņi jau ir palīdzējuši daudziem klientiem sasniegt plānotos mērķus un iegūt izcilus rezultātus.
+            /l  Mes jau palīdzējam daudziem klientiem sasniegt plānotos mērķus un iegūt izcilus rezultātus.
         
             /l  Mūsu speciālistiem ir sertifikāti saules paneļu uzstādīšanai.
         
@@ -876,7 +862,7 @@ function Prices() {
 
     //solar
     SolarProjectPrice = 450;
-    SolarBuildPrice =150;
+    SolarBuildPrice =30;
     SolarInvertorPrice =150;
     SolarCheckPrice =150;
     SolarObjPassPrice = 200;
@@ -886,10 +872,10 @@ function Prices() {
     ElectroProjectPrice = 450;
     ElectroBuildPrice = 100;
     ElectroMeasurementsPrice = 150;
-    ElectroObjPassPrice = 150;
+    ElectroObjPassPrice = 300;
     CctvInstllPrice = 200;
-    smarHomePrice = 150;
-    lightningProtectionPrice = 250;
+    smarHomePrice = 700;
+    lightningProtectionPrice = 800;
 
     return {SolarProjectPrice, SolarBuildPrice, SolarInvertorPrice , SolarCheckPrice,SolarObjPassPrice,
     ElectroProjectPrice,ElectroBuildPrice,ElectroMeasurementsPrice,ElectroObjPassPrice ,CctvInstllPrice,smarHomePrice,lightningProtectionPrice};

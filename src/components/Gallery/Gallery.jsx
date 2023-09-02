@@ -15,7 +15,7 @@ function HomePageProjects (props) {
 
     return (
         <div className={imagesAreLoaded ? 'homePageProjectWrapper' : 'imgLazyLoaderGallery' } 
-        style={imagesAreLoaded ? {backgroundImage: 'url("./img/workImg/'+ props.imgName + '"'}: {}}
+            style={imagesAreLoaded ? {backgroundImage: 'url("./img/workImg/'+ props.imgName + '"'}: {}}
         >
             
             <div className='itemInfo '>
