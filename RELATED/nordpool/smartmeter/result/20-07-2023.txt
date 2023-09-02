@@ -1,1 +1,0 @@
-{"time":"23:59:59","totalActiveConsumed":"124.210","totalActiveConsumed1":"42.230","totalActiveConsumed2":"39.000","totalActiveConsumed3":"42.980","ReverseActiveEnergy":"111.110","ReverseActiveEnergy1":"36.510","ReverseActiveEnergy2":"32.810","ReverseActiveEnergy3":"41.790"}
