@@ -88,7 +88,7 @@ function HomePageContentByLanguage() {
             break;
         default:
             subSlogan = "PAR ZAĻĀKU PASAULI";
-            btn = 'PARUNĀSIM PAR JŪSU NĀKĀKO PROJEKTU ?';
+            btn = 'PARUNĀSIM PAR JŪSU NĀKĀMO PROJEKTU ?';
             headerLink1 = "SAULES PANEĻI" ;
             headerLink2 = "ELEKTROMONTĀŽAS DARBI" ;
             headerLink3 = "KONTAKTI" ;
